@@ -2,26 +2,144 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+*,
+*::after,
+*::before {
+  line-height: 100%;
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #0C0B13;
+  color: #ACA5B7;
+}
+
+.text-primary {
+  background: linear-gradient(165.01deg, #FFFFFF 60.48%, #3B2398 131.02%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.glow {
+  background: linear-gradient(180deg, #3E229F 11.42%, #060310 178%), #D9D9D9;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+}
+
+.modal {
+  border: solid 1px transparent;
+  border-radius: 24px;
+  background-image: linear-gradient(345.04deg, #0E0D17 78.2%, #351D95 137.99%), linear-gradient(174.7deg, #4027A4 -6.17%, rgba(0, 0, 0, 0) 72.38%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.bg-opinion {
+  border: solid 1px transparent;
+  border-radius: 8px;
+  background-image: linear-gradient(180deg, #151225 0%, #1E1A32 100%),  linear-gradient(112.43deg, #33295B 18.07%, rgba(0, 0, 0, 0) 100.73%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.bg-neutral {
+  background: linear-gradient(96.11deg, #201E2A 45.17%, #0A0713 187.95%), #D9D9D9;
+}
+
+.service {
+  border: solid 1px transparent;
+  border-radius: 48px;
+  background-image: linear-gradient(180deg, #151225 0%, #1E1A32 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.modal-header {
+  border: solid 1px transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(304.7deg, #0B0A12 0.25%, #351D95 336.91%), linear-gradient(90.38deg, #4027A4 -18.14%, rgba(64, 39, 164, 0) 22.74%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.service-header {
+  border: solid 1px transparent;
+  border-radius: 12px;
+  background-image: linear-gradient(180deg, #151225 0%, #1E1A32 100%), linear-gradient(172.58deg, #52458B 9.03%, rgba(27, 22, 45, 0) 35.87%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.service-fore {
+  border: solid 1px transparent;
+  border-radius: 16px;
+  border-bottom-left-radius: 48px;
+  background-image: linear-gradient(209.67deg, #696293 -65.87%, #1E1A32 57.46%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.service-fore-hovered {
+  border: solid 1px transparent;
+  border-radius: 16px;
+  background-image: linear-gradient(180deg, #292442 0%, #1E1A32 100%), linear-gradient(172.58deg, #52458B 9.03%, rgba(27, 22, 45, 0) 35.87%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.service-back {
+  border: solid 1px transparent;
+  border-radius: 16px;
+  border-bottom-left-radius: 48px;
+  background-image: linear-gradient(209.67deg, #3D3661 -65.87%, #1E1A32 57.46%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.modal-grid-box {
+  border: solid 1px transparent;
+  border-radius: 8px;
+  background-image: linear-gradient(252.02deg, rgba(24, 15, 61, 0) -19.47%, #120D2B 42.19%), linear-gradient(180deg, #3D259D 0%, rgba(0, 0, 0, 0) 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.text-shadow {
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: text-shadow 250ms ease-out 1s forwards;
+}
+
+@keyframes text-shadow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.home-project {
+  border: solid 1px transparent;
+  border-radius: 32px;
+  background-image: radial-gradient(174.8% 165.83% at 5.19% 151.26%, #161320 3%, #0D0C13 98.96%), linear-gradient(223.22deg, rgba(187, 164, 246, 0.8) 23.38%, rgba(36, 16, 90, 0) 74.46%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.padding {
+  padding-left: 8vw;
+  padding-right: 8vw;
+}
+
+@media all and (min-width: 768px) {
+  .padding {
+    padding-left: 12vw;
+    padding-right: 12vw;
+  }
 }
