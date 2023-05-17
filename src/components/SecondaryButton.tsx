@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { arrowDown } from "../assets/general";
 import { ButtonProps } from "../types/button";
 
@@ -7,6 +8,7 @@ export default function SecondaryButton({
   onClick,
   type,
 }: ButtonProps) {
+  const seoTitle = typeof children === "string" ? children : "Navigate";
   return (
     <div className="relative sm:max-w-max z-10">
       <div className="absolute inset-0 border-[1px] border-[#7856FF]/20 rounded-lg pointer-events-none" />
@@ -16,7 +18,14 @@ export default function SecondaryButton({
         className={`bg-secondary w-full sm:max-w-max justify-center py-3 px-6 shadow-secondary_button flex items-center rounded-lg text-white text-sm font-semibold ${className}`}
       >
         {children}
-        <img className="max-h-[1.2em] ml-2" src={arrowDown} alt="" />
+        <Image
+          height={18}
+          width={12}
+          className="w-auto ml-2"
+          src={arrowDown}
+          alt={seoTitle}
+          title={seoTitle}
+        />
       </button>
     </div>
   );
