@@ -1,5 +1,5 @@
 import { defaultUser } from "@/assets/home/home";
-import { bezcv } from "@/assets/projects/projects";
+import { bezcv, smarttipz } from "@/assets/projects/projects";
 import { Opinion } from "@/types/opinions";
 import { Project } from "@/types/projects";
 import { Service } from "@/types/services";
@@ -112,10 +112,10 @@ export const projects: Project[] = [
     link: "https://bezcv.com",
   },
   {
-    title: "bezCV - online platform for recruiters and employees",
-    desc: "Hire and seek recruiters, everything done by our team, from design to functionality.",
-    thumbnail: bezcv,
-    link: "https://bezcv.com",
+    title: "SmartTipz - online video platform for sharing and watching content",
+    desc: "Choose from the normal and business account. Explore videos and earn on uploading content through tipping system.",
+    thumbnail: smarttipz,
+    link: "https://www.smarttipz.com",
   },
   {
     title: "bezCV - online platform for recruiters and employees",
@@ -124,9 +124,9 @@ export const projects: Project[] = [
     link: "https://bezcv.com",
   },
   {
-    title: "bezCV - online platform for recruiters and employees",
-    desc: "Hire and seek recruiters, everything done by our team, from design to functionality.",
-    thumbnail: bezcv,
-    link: "https://bezcv.com",
+    title: "SmartTipz - online video platform for sharing and watching content",
+    desc: "Choose from the normal and business account. Explore videos and earn on uploading content through tipping system.",
+    thumbnail: smarttipz,
+    link: "https://www.smarttipz.com",
   },
 ];

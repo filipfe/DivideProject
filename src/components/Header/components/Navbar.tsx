@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import PrimaryButton from "../../PrimaryButton";
-import CustomLink from "./CustomLink";
+import HashLink from "./HashLink";
 import { usePathname } from "next/navigation";
 
 const lineStyle = "h-[3px] w-full transition rounded-xl";
@@ -27,9 +27,9 @@ const Navbar = () => {
           active && "-translate-x-full md:translate-x-0"
         } md:left-auto h-screen md:h-full md:items-center w-max`}
       >
-        <CustomLink to="/">Team</CustomLink>
-        <CustomLink to="/work">Our work</CustomLink>
-        <CustomLink to="/contact">Contact</CustomLink>
+        <HashLink to="/">Team</HashLink>
+        <HashLink to="work">Our work</HashLink>
+        <HashLink to="opinions">Relationship</HashLink>
         <PrimaryButton>Hire us now</PrimaryButton>
       </div>
       <div
@@ -37,19 +37,19 @@ const Navbar = () => {
         className="burger flex flex-col relative z-50 md:hidden h-5 w-8 justify-between cursor-pointer"
       >
         <div
-          className={`transition-all ${lineStyle} ${
+          className={`transition-all bg-primary ${lineStyle} ${
             active
               ? "absolute top-[50%] translate-y-[-50%] rotate-45 max-w-full"
               : "max-w-[60%]"
           }`}
         />
         <div
-          className={`transition-opacity ${lineStyle} ${
+          className={`transition-opacity bg-primary ${lineStyle} ${
             active ? "opacity-0" : "opacity-100"
           }`}
         />
         <div
-          className={`transition-all ${lineStyle} ${
+          className={`transition-all bg-primary ${lineStyle} ${
             active
               ? "absolute top-[50%] translate-y-[-50%] -rotate-45 max-w-full"
               : "max-w-[60%] ml-auto"

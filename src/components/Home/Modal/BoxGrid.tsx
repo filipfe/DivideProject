@@ -1,6 +1,6 @@
 export default function BoxGrid() {
   return (
-    <div className="flex flex-col gap-4 sm:grid grid-cols-[1fr_1fr_3fr_2fr_2fr] grid-rows-[1fr_1fr_2fr_2fr] relative">
+    <div className="min-h-[3in] lg:min-h-0 gap-4 grid grid-cols-[1fr_1fr_3fr_2fr_2fr] grid-rows-[1fr_1fr_2fr_2fr] relative">
       <div className="modal-grid-box col-[2/4] row-span-2"></div>
       <div className="modal-grid-box col-span-2"></div>
       <div className="modal-grid-box col-span-2"></div>

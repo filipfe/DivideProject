@@ -11,7 +11,10 @@ import SecondaryButton from "@/components/SecondaryButton";
 export default function Opinions() {
   const [showMore, setShowMore] = useState(false);
   return (
-    <section className="padding py-[1in] flex flex-col items-center gap-16 relative overflow-hidden">
+    <section
+      className="padding py-[1in] flex flex-col items-center gap-16 relative overflow-hidden"
+      id="opinions"
+    >
       <div className="flex flex-col items-center gap-8">
         <Control
           ease="ease-out"

@@ -10,9 +10,9 @@ export default function Hero() {
   return (
     <section className="padding pt-[1.4in] md:pt-[1.8in] xl:pt-[2.2in] flex flex-col gap-12 min-h-screen items-center relative">
       <div className="flex flex-col items-center gap-6 relative">
-        <h1 className="text-4xl md:text-5xl xl:text-[4rem] w-full max-w-[12in] text-center leading-tight sm:leading-tight md:leading-tight xl:leading-tight text-primary font-bold">
+        <h1 className="text-[2.75rem] xl:text-[4rem] w-full max-w-[12in] text-center leading-tight sm:leading-tight md:leading-tight xl:leading-tight text-primary font-bold">
           Building{" "}
-          <span className="relative inline-block text-primary">
+          <span className="relative inline-block text-primary min-w-max">
             <div className="text-shadow bg-text_shadow absolute -z-10 -left-1 -right-[.5ch] -top-2 -bottom-2" />
             Custom Web <span className="hidden sm:inline">Solutions</span>
           </span>{" "}
@@ -27,13 +27,13 @@ export default function Hero() {
           <SecondaryButton>View our work</SecondaryButton>
         </div>
         <Pointer
-          pointerPosition="-left-[2.5in] -top-[3rem]"
+          pointerPosition="-left-[2.5in] -top-[3rem] hidden md:flex"
           dotPosition="left-[-4px] top-[-4px]"
           svg={<SidewaysDiagonally />}
           delay={1000}
         />
         <Pointer
-          pointerPosition="-right-[2.5in] -top-[3rem] scale-x-[-1]"
+          pointerPosition="-right-[2.5in] -top-[3rem] scale-x-[-1] hidden md:flex"
           dotPosition="left-[-4px] top-[-4px]"
           svg={<SidewaysDiagonally />}
           delay={1500}
@@ -54,25 +54,25 @@ export default function Hero() {
       <Modal />
       <Pointer
         dotPosition="left-[50%] translate-x-[-50%] top-[-3px]"
-        pointerPosition="left-[1.6in] bottom-[1in]"
+        pointerPosition="left-[1.6in] bottom-[1in] hidden sm:block"
         svg={<Top />}
         delay={1200}
       />
       <Pointer
         dotPosition="left-[50%] translate-x-[-50%] top-[-3px]"
-        pointerPosition="right-[1.6in] bottom-[1in]"
+        pointerPosition="right-[1.6in] bottom-[1in] hidden sm:block"
         svg={<Top />}
         delay={400}
       />
       <Pointer
         dotPosition="left-[50%] translate-x-[-50%] top-[-3px]"
-        pointerPosition="left-[1in] top-[30%]"
+        pointerPosition="left-[1in] top-[30%] hidden sm:block"
         svg={<Top />}
         delay={600}
       />
       <Pointer
         dotPosition="left-[50%] translate-x-[-50%] top-[-3px]"
-        pointerPosition="right-[1in] top-[30%]"
+        pointerPosition="right-[1in] top-[30%] hidden sm:block"
         svg={<Top />}
         delay={1800}
       />

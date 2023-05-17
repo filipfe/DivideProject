@@ -50,7 +50,7 @@ const Pointer = ({
   }, [dotRef.current]);
 
   return (
-    <div className={`absolute ${pointerPosition}`}>
+    <div className={`absolute -z-10 ${pointerPosition}`}>
       <div
         ref={dotRef}
         className={`absolute overflow-hidden rounded-full opacity-0 ${dotPosition}`}

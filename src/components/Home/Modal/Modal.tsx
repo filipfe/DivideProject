@@ -21,8 +21,8 @@ export default function Modal() {
               <div className="bg-primary h-3 w-3 rounded-full" />
               <div className="bg-primary h-3 w-3 rounded-full" />
             </div>
-            <div className="grid grid-cols-[max-content_1fr] gap-16 px-6 py-4">
-              <div className="flex flex-col gap-3 text-transparent bg-clip-text bg-[linear-gradient(180deg,#5B4A77_14.28%,rgba(47,34,69,0)_94.35%)]">
+            <div className="lg:grid grid-cols-[max-content_1fr] gap-16 px-6 py-4">
+              <div className="hidden lg:flex flex-col gap-3 text-transparent bg-clip-text bg-[linear-gradient(180deg,#5B4A77_14.28%,rgba(47,34,69,0)_94.35%)]">
                 {linesOfCode.map((line, index) => (
                   <LineOfCode text={line} index={index + 1} key={line} />
                 ))}
