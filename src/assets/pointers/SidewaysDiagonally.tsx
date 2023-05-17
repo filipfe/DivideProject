@@ -1,3 +1,5 @@
+"use client";
+
 import { LegacyRef, forwardRef } from "react";
 
 const SidewaysDiagonally = forwardRef(
@@ -14,6 +16,7 @@ const SidewaysDiagonally = forwardRef(
           ref={ref}
           d="M159 29H42.5903C39.0407 29 35.5919 27.8196 32.7866 25.6447L1.00001 1"
           stroke="url(#paint0_linear_1_48)"
+          className="opacity-0"
         />
         <defs>
           <linearGradient

@@ -1,3 +1,5 @@
+"use client";
+
 import { LegacyRef, forwardRef } from "react";
 
 const Top = forwardRef((props, ref: LegacyRef<SVGPathElement>) => {
@@ -14,6 +16,7 @@ const Top = forwardRef((props, ref: LegacyRef<SVGPathElement>) => {
         opacity="0.7"
         d="M1 0V209"
         stroke="url(#paint0_linear_1_45)"
+        className="opacity-0"
       />
       <defs>
         <linearGradient

@@ -1,6 +1,6 @@
 "use client";
 
-import { cloneElement, useEffect, useRef } from "react";
+import { cloneElement, useLayoutEffect, useRef } from "react";
 
 type PointerProps = {
   dotPosition: string;
@@ -19,13 +19,13 @@ const Pointer = ({
   const dotRef = useRef<HTMLDivElement>(null!);
   const SVGElement = () => cloneElement(svg, { ref: lineRef });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const line = lineRef.current;
-    console.log(line);
-    if (!line || !line.getTotalLength) return;
+    if (!line) return;
     const length = line.getTotalLength();
     line.style.strokeDasharray = length.toString();
     line.style.strokeDashoffset = length.toString();
+    line.style.opacity = "1";
     line.animate([{ strokeDashoffset: length }, { strokeDashoffset: 0 }], {
       duration: 2000,
       easing: "ease-in-out",
@@ -35,7 +35,7 @@ const Pointer = ({
     });
   }, [lineRef.current]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!dotRef.current) return;
     const dot = dotRef.current;
     dot.animate([{ opacity: 0 }, { opacity: 1 }], {
