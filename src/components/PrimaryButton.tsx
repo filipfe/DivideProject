@@ -8,7 +8,7 @@ export default function PrimaryButton({
   type = "submit",
 }: ButtonProps) {
   return (
-    <div className="relative w-max">
+    <div className="relative">
       <div className="absolute inset-0 border-[1px] border-[#7856FF]/20 rounded-lg pointer-events-none" />
       <button
         type={type}

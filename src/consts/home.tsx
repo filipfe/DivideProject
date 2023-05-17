@@ -1,4 +1,5 @@
 import { defaultUser } from "@/assets/home/home";
+import { bezcv } from "@/assets/projects/projects";
 import { Opinion } from "@/types/opinions";
 import { Project } from "@/types/projects";
 import { Service } from "@/types/services";
@@ -82,7 +83,7 @@ export const opinions: Opinion[] = [
 export const services: Service[] = [
   {
     title: "Designing UI/UX",
-    desc: "Lorem ipsum dolor sit amet consectetur. Vitae diam donec.",
+    desc: "Lorem ipsum dolor sit amet consectetur. Vitae diam donec. Vitae diam donec.",
     decorator: (
       <div className="grid grid-cols-2 gap-4 h-full">
         <div className="col-span-2 service-fore-hovered shadow-[0px_4px_4px_rgba(0,0,0,0.25)]" />
@@ -93,12 +94,12 @@ export const services: Service[] = [
   },
   {
     title: "Front-End Development",
-    desc: "Lorem ipsum dolor sit amet consectetur. Vitae diam donec ",
+    desc: "Lorem ipsum dolor sit amet consectetur. Vitae diam donec. Vitae diam donec.",
     decorator: <></>,
   },
   {
     title: "Back-End Development",
-    desc: "Lorem ipsum dolor sit amet consectetur. Vitae diam donec ",
+    desc: "Lorem ipsum dolor sit amet consectetur. Vitae diam donec. Vitae diam donec.",
     decorator: <></>,
   },
 ];
@@ -107,17 +108,25 @@ export const projects: Project[] = [
   {
     title: "bezCV - online platform for recruiters and employees",
     desc: "Hire and seek recruiters, everything done by our team, from design to functionality.",
+    thumbnail: bezcv,
+    link: "https://bezcv.com",
   },
   {
     title: "bezCV - online platform for recruiters and employees",
     desc: "Hire and seek recruiters, everything done by our team, from design to functionality.",
+    thumbnail: bezcv,
+    link: "https://bezcv.com",
   },
   {
     title: "bezCV - online platform for recruiters and employees",
     desc: "Hire and seek recruiters, everything done by our team, from design to functionality.",
+    thumbnail: bezcv,
+    link: "https://bezcv.com",
   },
   {
     title: "bezCV - online platform for recruiters and employees",
     desc: "Hire and seek recruiters, everything done by our team, from design to functionality.",
+    thumbnail: bezcv,
+    link: "https://bezcv.com",
   },
 ];

@@ -19,6 +19,7 @@ module.exports = {
           "linear-gradient(95.98deg, #3B268B -11.21%, rgba(0, 0, 0, 0) 58.33%), linear-gradient(89.77deg, #4027A4 1.4%, rgba(18, 18, 18, 0) 85.2%)",
         opinion:
           "linear-gradient(180deg, #151225 0%, #1E1A32 100%), linear-gradient(68.06deg, #0B0814 55.44%, #1E1A32 106.22%)",
+        star: "linear-gradient(270.23deg, rgba(10, 8, 19, 0) 0.4%, #46386D 51.76%, rgba(10, 8, 19, 0) 100%)",
       },
       boxShadow: {
         primary_button:

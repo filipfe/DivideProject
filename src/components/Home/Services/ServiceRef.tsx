@@ -9,10 +9,10 @@ export default function ServiceRef({ title, desc, decorator }: Service) {
         <div className="bg-[#837AA4] h-3 w-3 rounded-full" />
         <div className="bg-[#837AA4] h-3 w-3 rounded-full" />
       </div>
-      <h3 className="text-3xl w-min font-medium text-primary leading-snug px-8">
+      <h3 className="text-3xl w-min font-semibold text-primary leading-snug px-8">
         {title}
       </h3>
-      <p className="leading-relaxed px-8">{desc}</p>
+      <p className="leading-relaxed font-medium text-sm px-8">{desc}</p>
       <div className="service-back max-w-[85%] pt-6 pr-6 mt-8">
         <div className="h-[2in] service-fore rounded-xl p-6">
           <Decorator />

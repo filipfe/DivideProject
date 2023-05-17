@@ -4,10 +4,11 @@ import { opinions } from "@/consts/home";
 import Control from "react-control-js";
 import OpinionRef from "./OpinionRef";
 import SearchBar from "@/components/SearchBar";
+import Star from "@/components/Star";
 
 export default function Opinions() {
   return (
-    <section className="padding py-[1in] flex flex-col items-center gap-16 relative">
+    <section className="padding py-[1in] flex flex-col items-center gap-16 relative overflow-hidden">
       <div className="flex flex-col items-center gap-8">
         <Control
           ease="ease-out"
@@ -53,7 +54,7 @@ export default function Opinions() {
               />
             ))}
         </div>
-        <div className="flex flex-col gap-8 mt-8">
+        <div className="flex flex-col gap-8 xl:mt-8">
           {opinions
             .filter((opinion) => opinion.column === 2)
             .map((opinion) => (
@@ -82,6 +83,11 @@ export default function Opinions() {
             ))}
         </div>
       </div>
+      <Star position="top-[20%] left-[2rem]" />
+      <Star position="bottom-[30%] hidden sm:flex left-[8%]" />
+      <Star position="top-[20%] hidden sm:flex right-[2rem]" />
+      <Star position="top-[40%] left-[30%]" height="6in" />
+      <Star position="top-[60%] right-[20%]" height="6in" />
       <div className="absolute left-0 right-0 bottom-0 w-full h-[2in] bg-[linear-gradient(180deg,rgba(10,8,19,0.6)_0%,#0A0812_29.91%)] blur-md" />
     </section>
   );
