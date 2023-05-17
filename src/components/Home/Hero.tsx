@@ -13,7 +13,7 @@ export default function Hero() {
         <h1 className="text-4xl md:text-5xl xl:text-[4rem] w-full max-w-[12in] text-center leading-tight sm:leading-tight md:leading-tight xl:leading-tight text-primary font-bold">
           Building{" "}
           <span className="relative inline-block text-primary">
-            <div className="text-shadow bg-text_shadow absolute -z-10 -left-1 -right-[.5ch] -top-2 bottom-0" />
+            <div className="text-shadow bg-text_shadow absolute -z-10 -left-1 -right-[.5ch] -top-2 -bottom-2" />
             Custom Web <span className="hidden sm:inline">Solutions</span>
           </span>{" "}
           <span className="inline sm:hidden">Solutions </span>
