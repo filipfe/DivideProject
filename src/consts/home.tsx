@@ -25,7 +25,7 @@ export const opinions: Opinion[] = [
     user: {
       fullName: "Lucas Kowalski",
       image: defaultUser,
-      position: "CEO of bezCV",
+      position: "CEO of XYZ",
     },
   },
   {
@@ -35,7 +35,7 @@ export const opinions: Opinion[] = [
     user: {
       fullName: "Lucas Kowalski",
       image: defaultUser,
-      position: "CEO of bezCV",
+      position: "CEO of XYZ",
     },
   },
   {
@@ -45,7 +45,7 @@ export const opinions: Opinion[] = [
     user: {
       fullName: "Lucas Kowalski",
       image: defaultUser,
-      position: "CEO of bezCV",
+      position: "CEO of XYZ",
     },
   },
   {
@@ -55,7 +55,7 @@ export const opinions: Opinion[] = [
     user: {
       fullName: "Lucas Kowalski",
       image: defaultUser,
-      position: "CEO of bezCV",
+      position: "CEO of XYZ",
     },
   },
   {
@@ -65,7 +65,7 @@ export const opinions: Opinion[] = [
     user: {
       fullName: "Lucas Kowalski",
       image: defaultUser,
-      position: "CEO of bezCV",
+      position: "CEO of XYZ",
     },
   },
   {
@@ -75,7 +75,7 @@ export const opinions: Opinion[] = [
     user: {
       fullName: "Lucas Kowalski",
       image: defaultUser,
-      position: "CEO of bezCV",
+      position: "CEO of XYZ",
     },
   },
 ];

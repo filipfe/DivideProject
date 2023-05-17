@@ -5,8 +5,11 @@ import Control from "react-control-js";
 import OpinionRef from "./OpinionRef";
 import SearchBar from "@/components/SearchBar";
 import Star from "@/components/Star";
+import { useState } from "react";
+import SecondaryButton from "@/components/SecondaryButton";
 
 export default function Opinions() {
+  const [showMore, setShowMore] = useState(false);
   return (
     <section className="padding py-[1in] flex flex-col items-center gap-16 relative overflow-hidden">
       <div className="flex flex-col items-center gap-8">
@@ -88,7 +91,26 @@ export default function Opinions() {
       <Star position="top-[20%] hidden sm:flex right-[2rem]" />
       <Star position="top-[40%] left-[30%]" height="6in" />
       <Star position="top-[60%] right-[20%]" height="6in" />
-      <div className="absolute left-0 right-0 bottom-0 w-full h-[2in] bg-[linear-gradient(180deg,rgba(10,8,19,0.6)_0%,#0A0812_29.91%)] blur-md" />
+      <div
+        className={`absolute left-0 right-0 bottom-0 w-full h-full flex items-center justify-center transition-all ${
+          showMore ? "max-h-[.5in]" : "max-h-[2in]"
+        }`}
+      >
+        <SecondaryButton
+          rotate={showMore}
+          className="hover:opacity-100 opacity-60 transition-opacity"
+          onClick={() => setShowMore((prev) => !prev)}
+        >
+          {showMore ? "Show less" : "Show more"}
+        </SecondaryButton>
+        <div
+          className={`absolute inset-0 w-full h-full blur-md ${
+            showMore
+              ? "bg-transparent"
+              : "bg-[linear-gradient(180deg,rgba(10,8,19,0.6)_0%,#0A0812_29.91%)]"
+          }`}
+        />
+      </div>
     </section>
   );
 }

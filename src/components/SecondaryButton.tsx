@@ -5,9 +5,10 @@ import { ButtonProps } from "../types/button";
 export default function SecondaryButton({
   children,
   className,
+  rotate,
   onClick,
   type,
-}: ButtonProps) {
+}: ButtonProps & { rotate?: boolean }) {
   const seoTitle = typeof children === "string" ? children : "Navigate";
   return (
     <div className="relative sm:max-w-max z-10">
@@ -21,7 +22,9 @@ export default function SecondaryButton({
         <Image
           height={18}
           width={12}
-          className="w-auto ml-2"
+          className={`w-auto ml-2 transition-transform ${
+            rotate ? "rotate-180" : "rotate-0"
+          }`}
           src={arrowDown}
           alt={seoTitle}
           title={seoTitle}
