@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     "Our team offers a range of services to help you create the digital experience you want.",
   applicationName: "DivideProject website",
   authors: [{ name: "DivideProject", url: "https://www.divideproject.com" }],
-  other: {},
 };
 
 export default function RootLayout({
