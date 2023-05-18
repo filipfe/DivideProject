@@ -3,6 +3,7 @@ import "./globals.css";
 import { Montserrat } from "next/font/google";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import GAProvider from "@/providers/GAProvider";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -10,6 +11,9 @@ export const metadata: Metadata = {
   title: "DivideProject - Building custom web solutions that drive results",
   description:
     "Our team offers a range of services to help you create the digital experience you want.",
+  applicationName: "DivideProject website",
+  authors: [{ name: "DivideProject", url: "https://www.divideproject.com" }],
+  other: {},
 };
 
 export default function RootLayout({
@@ -20,9 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <GAProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </GAProvider>
       </body>
     </html>
   );
