@@ -38,6 +38,7 @@ export default function Form() {
           <Input
             name="contact"
             id={field.name}
+            value={formData[field.name]}
             label={`${field.label}${field.isOptional ? " (optional)" : ""}`}
             key={field.name}
             onChange={(e) =>
