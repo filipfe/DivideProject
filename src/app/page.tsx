@@ -2,6 +2,8 @@ import Opinions from "@/components/Home/Opinions/Opinions";
 import Hero from "../components/Home/Hero";
 import Projects from "../components/Home/Projects/Projects";
 import Services from "@/components/Home/Services/Services";
+import Banner from "@/components/Home/Banner/Banner";
+import Contact from "@/components/Home/Contact/Contact";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <Services />
       <Projects />
       <Opinions />
+      <Banner />
+      <Contact />
     </div>
   );
 }

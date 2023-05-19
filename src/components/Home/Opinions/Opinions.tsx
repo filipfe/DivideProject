@@ -12,7 +12,7 @@ export default function Opinions() {
   const [showMore, setShowMore] = useState(false);
   return (
     <section
-      className="padding py-[1in] flex flex-col items-center gap-16 relative overflow-hidden"
+      className="padding pt-[1in] pb-[2in] flex flex-col items-center gap-16 relative overflow-hidden"
       id="opinions"
     >
       <div className="flex flex-col items-center gap-8">
@@ -95,13 +95,13 @@ export default function Opinions() {
       <Star position="top-[40%] left-[30%]" height="6in" />
       <Star position="top-[60%] right-[20%]" height="6in" />
       <div
-        className={`absolute left-0 right-0 bottom-0 w-full h-full flex items-center justify-center transition-all ${
-          showMore ? "max-h-[.5in]" : "max-h-[2in]"
+        className={`absolute pb-[1in] left-0 right-0 bottom-0 w-full h-full flex items-center justify-center transition-all ${
+          showMore ? "max-h-[.5in]" : "max-h-[3in]"
         }`}
       >
         <SecondaryButton
           rotate={showMore}
-          className="hover:opacity-100 opacity-60 transition-opacity"
+          className="transition-opacity"
           onClick={() => setShowMore((prev) => !prev)}
         >
           {showMore ? "Show less" : "Show more"}

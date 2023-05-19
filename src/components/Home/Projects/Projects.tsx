@@ -1,9 +1,6 @@
-"use client";
-
 import PrimaryButton from "@/components/PrimaryButton";
 import ProjectsList from "./components/ProjectsList";
 import SearchBar from "@/components/SearchBar";
-import Star from "@/components/Star";
 
 export default function Projects() {
   return (
@@ -35,15 +32,6 @@ export default function Projects() {
           </div>
         </div>
         <ProjectsList />
-      </div>
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <Star position="top-[20%] left-[2rem]" />
-        <Star position="bottom-[30%] hidden sm:flex left-[8%]" />
-        <Star position="top-[20%] hidden sm:flex right-[2rem]" />
-        <Star position="top-[40%] left-[30%]" height="6in" />
-        <Star position="top-[50%] left-[12%]" width="6in" />
-        <Star position="top-[65%] right-[44%]" height="6in" />
-        <Star position="top-[60%] right-[20%]" height="6in" />
       </div>
     </section>
   );

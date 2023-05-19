@@ -1,3 +1,5 @@
+"use client";
+
 import { search } from "@/assets/general";
 import { TypeAnimation } from "react-type-animation";
 

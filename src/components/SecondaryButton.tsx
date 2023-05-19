@@ -16,7 +16,7 @@ export default function SecondaryButton({
       <button
         type={type}
         onClick={onClick}
-        className={`bg-secondary w-full sm:max-w-max justify-center py-3 px-6 shadow-secondary_button flex items-center rounded-lg text-white text-sm font-semibold ${className}`}
+        className={`bg-secondary w-full sm:max-w-max justify-center py-[10px] px-6 shadow-secondary_button flex items-center rounded-lg text-white text-sm font-medium ${className}`}
       >
         {children}
         <Image

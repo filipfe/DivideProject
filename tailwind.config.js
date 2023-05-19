@@ -20,6 +20,14 @@ module.exports = {
         opinion:
           "linear-gradient(180deg, #151225 0%, #1E1A32 100%), linear-gradient(68.06deg, #0B0814 55.44%, #1E1A32 106.22%)",
         star: "linear-gradient(270.23deg, rgba(10, 8, 19, 0) 0.4%, #46386D 51.76%, rgba(10, 8, 19, 0) 100%)",
+        banner:
+          "linear-gradient(129.18deg, #110F1C 34.1%, #0E0C16 125.22%), linear-gradient(180deg, #100C22 -0.74%, #140F29 100%)",
+        "banner-inner":
+          "linear-gradient(270deg, rgba(37, 33, 54, 0) -12.52%, #3A3454 55.43%, rgba(37, 33, 54, 0) 124.8%)",
+        dropdown:
+          "linear-gradient(335.78deg, #110F1C -75.02%, #0E0C16 85.58%), linear-gradient(344.57deg, rgba(21, 18, 37, 0.15) -19.24%, rgba(30, 26, 50, 0.15) 90.97%)",
+        "dropdown-active":
+          "linear-gradient(96.11deg, #201E2A 45.17%, #0A0713 187.95%), linear-gradient(344.57deg, rgba(21, 18, 37, 0.15) -19.24%, rgba(30, 26, 50, 0.15) 90.97%)",
       },
       boxShadow: {
         primary_button:

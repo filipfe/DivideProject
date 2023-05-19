@@ -15,7 +15,7 @@ export default function PrimaryButton({
       <button
         type={type}
         onClick={onClick}
-        className={`bg-primary w-full sm:max-w-max justify-center py-3 px-6 shadow-primary_button flex items-center rounded-lg text-white text-sm font-semibold ${className}`}
+        className={`bg-primary w-full sm:max-w-max justify-center py-[10px] px-6 shadow-primary_button flex items-center rounded-lg text-white text-sm font-medium ${className}`}
       >
         {children}
         <Image

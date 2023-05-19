@@ -132,6 +132,32 @@ body {
   background-clip: padding-box, border-box;
 }
 
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-68vw);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(68vw);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 20s linear infinite;
+}
+
+.animate-slide-right {
+  animation: slide-right 20s linear infinite;
+}
+
 .padding {
   padding-left: 8vw;
   padding-right: 8vw;
@@ -141,5 +167,12 @@ body {
   .padding {
     padding-left: 12vw;
     padding-right: 12vw;
+  }
+}
+
+@media all and (min-width: 1536px) {
+  .padding {
+    padding-left: 16vw;
+    padding-right: 16vw;
   }
 }
