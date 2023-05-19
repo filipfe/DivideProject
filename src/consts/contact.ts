@@ -1,4 +1,4 @@
-import { ContactField, FAQ, FormData } from "@/types/contact";
+import { ContactField, FAQ } from "@/types/contact";
 
 export const FAQ_QUESTIONS: FAQ[] = [
     {

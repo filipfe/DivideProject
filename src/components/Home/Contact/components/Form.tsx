@@ -19,6 +19,7 @@ export default function Form() {
     <div className="flex flex-col gap-8 bg-dropdown border-[1px] border-[rgba(108,101,131,0.32)] rounded-xl p-12">
       <h3 className="text-primary text-xl font-semibold">
         <TypeAnimation
+          repeat={Infinity}
           sequence={[
             "Get in touch with us",
             3000,
