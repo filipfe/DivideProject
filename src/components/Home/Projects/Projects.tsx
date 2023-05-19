@@ -19,7 +19,7 @@ export default function Projects() {
               "",
             ]}
           />
-          <h2 className="text-3xl md:text-4xl xl:text-5xl w-full max-w-[8in] leading-tight sm:leading-tight md:leading-tight xl:leading-tight bg-[linear-gradient(46.93deg,#FFFFFF_21.95%,#3B2398_179.76%)] font-bold bg-clip-text text-transparent">
+          <h2 className="text-[2rem] md:text-4xl xl:text-5xl w-full max-w-[8in] leading-tight sm:leading-tight md:leading-tight xl:leading-tight bg-[linear-gradient(46.93deg,#FFFFFF_21.95%,#3B2398_179.76%)] font-bold bg-clip-text text-transparent">
             Quick journey of our latest projects
           </h2>
           <p className="text-[#C4BAD3] font-medium text-sm md:text-base leading-relaxed">

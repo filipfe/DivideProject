@@ -24,7 +24,9 @@ export default function Dropdown({
           className="bg-dropdown border-[1px] border-[rgba(108,101,131,0.32)] overflow-hidden rounded-xl p-6 relative flex flex-col"
         >
           <div className="flex items-center justify-between relative z-10">
-            <h3 className="text-p font-medium">{question}</h3>
+            <h3 className="text-p text-left leading-relaxed font-medium">
+              {question}
+            </h3>
             <Image
               width={16}
               height={16}

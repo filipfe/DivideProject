@@ -16,7 +16,7 @@ export default function Form() {
   });
 
   return (
-    <div className="flex flex-col gap-8 bg-dropdown border-[1px] border-[rgba(108,101,131,0.32)] rounded-xl p-12">
+    <div className="flex flex-col gap-8 bg-dropdown border-y-[1px] sm:border-[1px] border-[rgba(108,101,131,0.32)] sm:rounded-xl py-12 sm:p-12">
       <h3 className="text-primary text-xl font-semibold">
         <TypeAnimation
           repeat={Infinity}

@@ -35,7 +35,7 @@ export default function Services() {
             y={40}
             element={
               <div className="flex flex-col sm:flex-row justify-between gap-4">
-                <h2 className="text-3xl md:text-4xl xl:text-5xl w-full max-w-[8in] leading-tight sm:leading-tight md:leading-tight xl:leading-tight bg-[linear-gradient(46.93deg,#FFFFFF_21.95%,#3B2398_179.76%)] font-bold bg-clip-text text-transparent">
+                <h2 className="text-[2rem] md:text-4xl xl:text-5xl w-full max-w-[8in] leading-tight sm:leading-tight md:leading-tight xl:leading-tight bg-[linear-gradient(46.93deg,#FFFFFF_21.95%,#3B2398_179.76%)] font-bold bg-clip-text text-transparent">
                   Services with attention to detail
                 </h2>
                 <p className="font-medium text-sm md:text-base text-[#B8B5C3] leading-relaxed mt-4 max-w-[4in]">
