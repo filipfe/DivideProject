@@ -33,13 +33,13 @@ export default function Modal() {
         }
       />
       <Pointer
-        pointerPosition="absolute -left-[4rem] z-10 -top-[4rem]"
+        pointerPosition="absolute -left-[4rem] z-10 -top-[4rem] hidden md:block"
         dotPosition="top-[-3px] right-[-3px]"
         svg={<TopSideways />}
         delay={2200}
       />
       <Pointer
-        pointerPosition="absolute -right-[4rem] z-10 -top-[4rem] scale-x-[-1]"
+        pointerPosition="absolute -right-[4rem] z-10 -top-[4rem] scale-x-[-1] hidden md:block"
         dotPosition="top-[-3px] right-[-3px]"
         svg={<TopSideways />}
         delay={800}

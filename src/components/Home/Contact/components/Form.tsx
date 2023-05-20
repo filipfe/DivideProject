@@ -6,6 +6,7 @@ import Input from "./Input";
 import { CONTACT_FIELDS } from "@/consts/contact";
 import PrimaryButton from "@/components/PrimaryButton";
 import { TypeAnimation } from "react-type-animation";
+import { sendForm } from "@/lib/sendForm";
 
 export default function Form() {
   const [formData, setFormData] = useState<FormData>({
@@ -33,7 +34,7 @@ export default function Form() {
           ]}
         />
       </h3>
-      <form className="flex flex-col gap-4">
+      <form action={() => sendForm(formData)} className="flex flex-col gap-4">
         {CONTACT_FIELDS.map((field) => (
           <Input
             name="contact"
