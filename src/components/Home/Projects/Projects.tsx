@@ -24,8 +24,8 @@ export default function Projects() {
           </h2>
           <p className="text-[#C4BAD3] font-medium text-sm md:text-base leading-relaxed">
             Hop on a visual tour of our latest projects, showcasing our
-            expertise in web development and design. Discover innovation,
-            quality, and excellence in every step of our journey.
+            expertise in web development and design. Discover innovation and
+            quality in every step of our journey.
           </p>
           <div className="w-max">
             <PrimaryButton>View all work</PrimaryButton>
