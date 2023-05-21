@@ -27,7 +27,7 @@ const Navbar = () => {
           active && "-translate-x-full md:translate-x-0"
         } md:left-auto h-screen md:h-full md:items-center w-max`}
       >
-        <HashLink to="/">Team</HashLink>
+        <HashLink to="services">Services</HashLink>
         <HashLink to="work">Our work</HashLink>
         <HashLink to="opinions">Relationship</HashLink>
         <HashLink to="contact">
