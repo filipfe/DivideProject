@@ -9,7 +9,7 @@ export default function Projects() {
       id="work"
     >
       <div className="w-full xl:max-w-[85%] flex flex-col xl:grid grid-cols-2 gap-16 xl:gap-32">
-        <div className="flex flex-col gap-8 xl:sticky top-[20vh] h-max">
+        <div className="flex flex-col gap-8 xl:sticky top-[25vh] h-max">
           <SearchBar
             sequence={[
               "What kind of project would be ideal?",

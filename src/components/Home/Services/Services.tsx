@@ -8,7 +8,10 @@ import Star from "@/components/Star";
 
 export default function Services() {
   return (
-    <section className="padding py-[1in] flex flex-col items-center relative overflow-x-hidden">
+    <section
+      className="padding py-[1in] flex flex-col items-center relative overflow-x-hidden"
+      id="services"
+    >
       <div className="w-full xl:max-w-[85%] flex flex-col gap-16 ">
         <div className="flex flex-col gap-8">
           <Control

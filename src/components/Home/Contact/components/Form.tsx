@@ -7,8 +7,14 @@ import { CONTACT_FIELDS } from "@/consts/contact";
 import PrimaryButton from "@/components/PrimaryButton";
 import { TypeAnimation } from "react-type-animation";
 import { sendForm } from "@/lib/sendForm";
+import Loader from "@/components/Loader";
 
 export default function Form() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState({
+    positive: false,
+    message: "",
+  });
   const [formData, setFormData] = useState<FormData>({
     full_name: "",
     email: "",
@@ -34,7 +40,20 @@ export default function Form() {
           ]}
         />
       </h3>
-      <form action={() => sendForm(formData)} className="flex flex-col gap-4">
+      <form
+        action={() =>
+          sendForm(formData)
+            .then(() =>
+              setStatus({ positive: true, message: "A message has been sent!" })
+            )
+            .catch(() =>
+              setStatus({ positive: false, message: "Something went wrong" })
+            )
+            .finally(() => setIsLoading(false))
+        }
+        onSubmit={() => setIsLoading(true)}
+        className="flex flex-col gap-4"
+      >
         {CONTACT_FIELDS.map((field) => (
           <Input
             name="contact"
@@ -67,7 +86,17 @@ export default function Form() {
           </div>
         </label>
         <div className="w-max mt-8">
-          <PrimaryButton>Send message</PrimaryButton>
+          {status.message ? (
+            <span
+              className={status.positive ? "text-green-400" : "text-red-400"}
+            >
+              {status.message}
+            </span>
+          ) : isLoading ? (
+            <Loader />
+          ) : (
+            <PrimaryButton>Send message</PrimaryButton>
+          )}
         </div>
       </form>
     </div>

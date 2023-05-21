@@ -30,7 +30,9 @@ const Navbar = () => {
         <HashLink to="/">Team</HashLink>
         <HashLink to="work">Our work</HashLink>
         <HashLink to="opinions">Relationship</HashLink>
-        <PrimaryButton>Hire us now</PrimaryButton>
+        <HashLink to="contact">
+          <PrimaryButton>Hire us now</PrimaryButton>
+        </HashLink>
       </div>
       <div
         onClick={() => setActive((prev) => !prev)}

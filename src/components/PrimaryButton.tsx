@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { anchorArrow } from "../assets/general";
 import { ButtonProps } from "../types/button";

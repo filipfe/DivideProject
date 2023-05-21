@@ -1,3 +1,5 @@
+"use client";
+
 import { MouseEvent } from "react";
 
 type HashLinkProps = {
@@ -17,7 +19,7 @@ export default function HashLink({ children, to, className }: HashLinkProps) {
   };
 
   return (
-    <button onClick={handleNavigate} className="">
+    <button onClick={handleNavigate} className={className}>
       {children}
     </button>
   );
