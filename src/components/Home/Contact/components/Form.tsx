@@ -58,6 +58,7 @@ export default function Form() {
           <Input
             name="contact"
             id={field.name}
+            required={!field.isOptional}
             value={formData[field.name]}
             label={`${field.label}${field.isOptional ? " (optional)" : ""}`}
             key={field.name}
