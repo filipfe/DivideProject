@@ -39,19 +39,19 @@ const Navbar = () => {
         className="burger flex flex-col relative z-50 md:hidden h-5 w-8 justify-between cursor-pointer"
       >
         <div
-          className={`transition-all bg-primary-gradient ${lineStyle} ${
+          className={`transition-all bg-primary ${lineStyle} ${
             active
               ? "absolute top-[50%] translate-y-[-50%] rotate-45 max-w-full"
               : "max-w-[60%]"
           }`}
         />
         <div
-          className={`transition-opacity bg-primary-gradient ${lineStyle} ${
+          className={`transition-opacity bg-primary ${lineStyle} ${
             active ? "opacity-0" : "opacity-100"
           }`}
         />
         <div
-          className={`transition-all bg-primary-gradient ${lineStyle} ${
+          className={`transition-all bg-primary ${lineStyle} ${
             active
               ? "absolute top-[50%] translate-y-[-50%] -rotate-45 max-w-full"
               : "max-w-[60%] ml-auto"

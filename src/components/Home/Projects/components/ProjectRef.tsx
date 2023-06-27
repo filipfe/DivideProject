@@ -11,7 +11,7 @@ export default function ProjectRef({
 }: Project) {
   return (
     <div className={`flex flex-col gap-6`}>
-      <div className="service-header h-[2in] rounded-xl overflow-hidden relative">
+      <div className="service-header h-[2.5in] rounded-xl overflow-hidden relative">
         {thumbnail && (
           <Image
             fill

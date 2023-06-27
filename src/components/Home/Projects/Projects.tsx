@@ -8,7 +8,7 @@ export default function Projects() {
       className="padding py-[1in] flex flex-col items-center relative"
       id="work"
     >
-      <div className="w-full xl:max-w-[85%] flex flex-col xl:grid grid-cols-2 gap-16 xl:gap-32">
+      <div className="w-full xl:max-w-[90%] flex flex-col xl:grid grid-cols-[4fr_5fr] gap-16 xl:gap-32">
         <div className="flex flex-col gap-8 xl:sticky top-[25vh] h-max">
           <SearchBar
             sequence={[

@@ -53,7 +53,7 @@ type LineOfCodeProps = {
   text: string;
 };
 
-const LineOfCode = ({ index, text }: LineOfCodeProps) => {
+export const LineOfCode = ({ index, text }: LineOfCodeProps) => {
   return (
     <div className="flex items-center">
       <h4 className="font-medium w-[3ch]">{index}</h4>

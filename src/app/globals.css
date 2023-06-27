@@ -167,6 +167,32 @@ body {
   animation: slide-right 20s linear infinite;
 }
 
+.star-horizontal {
+  transform-origin: center;
+  animation: scale-x 1s ease-in-out 400ms alternate infinite;
+}
+
+.star-vertical {
+  transform-origin: center;
+  animation: scale-y 1s ease-in-out 1400ms alternate infinite;
+}
+
+@keyframes scale-y {
+  from {
+    transform: scaleY(100%);
+  } to {
+    transform: scaleY(0%);
+  }
+}
+
+@keyframes scale-x {
+  from {
+    transform: scaleX(100%);
+  } to {
+    transform: scaleX(0%);
+  }
+}
+
 .padding {
   padding-left: 8vw;
   padding-right: 8vw;

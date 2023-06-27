@@ -16,7 +16,7 @@ export default function ServiceRef({ title, desc, decorator }: Service) {
         {desc}
       </p>
       <div className="service-back max-w-[85%] pt-6 pr-6 mt-8">
-        <div className="h-[2in] service-fore rounded-xl p-6">
+        <div className="h-[2in] service-fore rounded-xl p-6 overflow-hidden">
           <Decorator />
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { defaultUser } from "@/assets/home/home";
-import { bezcv, smarttipz } from "@/assets/projects/projects";
+import { bezcv, flippify, smarttipz } from "@/assets/projects/projects";
+import { LineOfCode } from "@/components/Home/Modal/Modal";
 import { Opinion } from "@/types/opinions";
 import { Project } from "@/types/projects";
 import { Service } from "@/types/services";
@@ -95,12 +96,26 @@ export const services: Service[] = [
   {
     title: "Front-End Development",
     desc: "Build visually impressive and responsive websites with user-friendly interface.",
-    decorator: <></>,
+    decorator: (
+      <div className="hidden lg:flex flex-col gap-3 text-transparent bg-clip-text bg-[linear-gradient(180deg,#5B4A77_14.28%,rgba(47,34,69,0)_94.35%)]">
+        {linesOfCode.map(
+          (line, index) =>
+            index > 7 && <LineOfCode text={line} index={index + 1} key={line} />
+        )}
+      </div>
+    ),
   },
   {
     title: "Back-End Development",
     desc: "Create scalable and secure systems that handle complex operations.",
-    decorator: <></>,
+    decorator: (
+      <div className="hidden lg:flex flex-col gap-3 text-transparent bg-clip-text bg-[linear-gradient(180deg,#5B4A77_14.28%,rgba(47,34,69,0)_94.35%)]">
+        {linesOfCode.map(
+          (line, index) =>
+            index > 2 && <LineOfCode text={line} index={index + 1} key={line} />
+        )}
+      </div>
+    ),
   },
 ];
 
@@ -118,15 +133,9 @@ export const projects: Project[] = [
     link: "https://www.smarttipz.com",
   },
   {
-    title: "bezCV - online platform for recruiters and employees",
-    desc: "Hire and seek recruiters, everything done by our team, from design to functionality.",
-    thumbnail: bezcv,
-    link: "https://bezcv.com",
-  },
-  {
-    title: "SmartTipz - online video platform for sharing and watching content",
-    desc: "Choose from the normal and business account. Explore videos and earn on uploading content through tipping system.",
-    thumbnail: smarttipz,
-    link: "https://www.smarttipz.com",
+    title: "Flippify - our ultimate educational app for flashcards and notes",
+    desc: "Discover a whole new way of learning with Flippify. Seamlessly flip through interactive flashcards and access concise, organized notes on the go. Whether you're a student, professional, or lifelong learner, Flippify empowers you to master any subject with ease.",
+    thumbnail: flippify,
+    link: "https://expo.dev/accounts/divideproject/projects/flippify/builds/37d56b58-ca07-4f18-a599-fefbe766bd40",
   },
 ];

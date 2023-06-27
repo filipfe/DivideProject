@@ -20,6 +20,8 @@ module.exports = {
         opinion:
           "linear-gradient(180deg, #151225 0%, #1E1A32 100%), linear-gradient(68.06deg, #0B0814 55.44%, #1E1A32 106.22%)",
         star: "linear-gradient(270.23deg, rgba(10, 8, 19, 0) 0.4%, #46386D 51.76%, rgba(10, 8, 19, 0) 100%)",
+        "star-y":
+          "linear-gradient(180deg, rgba(10, 8, 19, 0) 0.4%, #46386D 51.76%, rgba(10, 8, 19, 0) 100%)",
         banner:
           "linear-gradient(129.18deg, #110F1C 34.1%, #0E0C16 125.22%), linear-gradient(180deg, #100C22 -0.74%, #140F29 100%)",
         "banner-inner":
