@@ -136,6 +136,6 @@ export const projects: Project[] = [
     title: "Flippify - our ultimate educational app for flashcards and notes",
     desc: "Discover a whole new way of learning with Flippify. Seamlessly flip through interactive flashcards and access concise, organized notes on the go. Whether you're a student, professional, or lifelong learner, Flippify empowers you to master any subject with ease.",
     thumbnail: flippify,
-    link: "https://expo.dev/accounts/divideproject/projects/flippify/builds/37d56b58-ca07-4f18-a599-fefbe766bd40",
+    link: "https://expo.dev/accounts/divideproject/projects/flippify/builds/b0d36768-de9a-4b55-b728-7307c836ea4b",
   },
 ];

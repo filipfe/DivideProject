@@ -2,7 +2,6 @@
 
 import { FormData } from "@/types/contact";
 
-
 export async function sendForm(formData: FormData) {
     const sgMail = require("@sendgrid/mail");
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
