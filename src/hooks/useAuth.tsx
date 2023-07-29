@@ -32,6 +32,13 @@ export default function useAuth(): AuthContextType {
       : toast.success("Verification link has been sent!");
   }
 
+  async function signInWithGoogle() {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+    });
+    console.log(error?.message);
+  }
+
   useEffect(() => {
     async function fetchSession() {
       const { data } = await supabase.auth.getSession();
@@ -44,5 +51,6 @@ export default function useAuth(): AuthContextType {
     isLogged,
     user,
     signInWithEmail,
+    signInWithGoogle,
   };
 }

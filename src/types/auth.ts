@@ -6,4 +6,5 @@ export type AuthContextType = {
     user: User;
     isLogged: boolean;
     signInWithEmail: (email: string) => void;
+    signInWithGoogle: () => void;
 }
