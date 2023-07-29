@@ -23,7 +23,7 @@ export default function useAuth(): AuthContextType {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: "http://localhost:3000/auth/callback",
+        emailRedirectTo: "https://www.divideproject.com/auth/callback",
       },
     });
     toast.remove(loadingToast);
