@@ -5,6 +5,7 @@ import { linesOfCode } from "../../../consts/home";
 import Pointer from "../../Pointer";
 import BoxGrid from "./BoxGrid";
 import Control from "react-control-js";
+import { LineOfCode } from "./LineOfCode";
 
 export default function Modal() {
   return (
@@ -47,17 +48,3 @@ export default function Modal() {
     </div>
   );
 }
-
-type LineOfCodeProps = {
-  index: number;
-  text: string;
-};
-
-export const LineOfCode = ({ index, text }: LineOfCodeProps) => {
-  return (
-    <div className="flex items-center">
-      <h4 className="font-medium w-[3ch]">{index}</h4>
-      <h4 className="text-sm font-medium">{text}</h4>
-    </div>
-  );
-};

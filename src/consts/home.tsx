@@ -1,6 +1,6 @@
 import { defaultUser } from "@/assets/home/home";
 import { bezcv, flippify, smarttipz } from "@/assets/projects/projects";
-import { LineOfCode } from "@/components/Home/Modal/Modal";
+import { LineOfCode } from "@/components/Home/Modal/LineOfCode";
 import { Opinion } from "@/types/opinions";
 import { Project } from "@/types/projects";
 import { Service } from "@/types/services";
