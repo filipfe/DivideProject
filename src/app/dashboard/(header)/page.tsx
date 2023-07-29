@@ -6,13 +6,12 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export default async function Dashboard() {
   const supabase = createServerComponentClient({ cookies });
 
   const { data: projects } = await supabase.from("projects").select("*");
-
-  const unfinishedProjects =
-    projects?.filter((project: Project) => project.status !== "finished") || [];
 
   return (
     <section className="min-h-screen bg-background py-[1.2in] xl:py-[1.6in] padding relative flex flex-col gap-8">

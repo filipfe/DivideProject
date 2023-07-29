@@ -6,5 +6,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://www.divideproject.com',
       lastModified: new Date(),
     },
+    {
+      url: "https://www.divideproject.com/sign-in",
+      lastModified: new Date()
+    },
+    {
+      url: "https://www.divideproject.com/dashboard",
+      lastModified: new Date()
+    },
+    {
+      url: "https://www.divideproject.com/dashboard/new-project",
+      lastModified: new Date()
+    },
   ];
 }
