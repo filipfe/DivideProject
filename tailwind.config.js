@@ -11,6 +11,8 @@ module.exports = {
         primary: "#241D4A",
         p: "#C4BAD3",
         background: "#0C0B13",
+        font: "#ACA5B7",
+        loading: "#1a1a1a",
       },
       backgroundImage: {
         primary: "linear-gradient(180deg, #3E229F 11.42%, #060310 178%)",

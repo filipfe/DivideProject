@@ -1,4 +1,4 @@
-import { ContactField, FAQ } from "@/types/contact";
+import { FAQ } from "@/types/contact";
 
 export const FAQ_QUESTIONS: FAQ[] = [
     {
@@ -20,23 +20,5 @@ export const FAQ_QUESTIONS: FAQ[] = [
         id: 3,
         question: 'Do you offer on-site consultations or meetings?',
         answer: 'Yes, we do offer on-site consultations and meetings, depending on the location and nature of the project. Please contact us to discuss your requirements, and we can arrange a meeting at your convenience to further understand your needs and provide personalized solutions.'
-    },
-]
-
-export const CONTACT_FIELDS: ContactField[] = [
-    {
-        name: 'full_name',
-        label: 'Full Name',
-        isOptional: false,
-    },
-    {
-        name: 'email',
-        label: 'Email',
-        isOptional: false,
-    },
-    {
-        name: 'budget',
-        label: 'Budget',
-        isOptional: true,
     },
 ]

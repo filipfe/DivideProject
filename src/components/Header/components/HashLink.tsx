@@ -9,7 +9,11 @@ type HashLinkProps = {
   icon?: JSX.Element;
 };
 
-export default function HashLink({ children, to, className }: HashLinkProps) {
+export default function HashLink({
+  children,
+  to,
+  className = "text-font hover:text-white transition-colors",
+}: HashLinkProps) {
   const handleNavigate = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const element = document.getElementById(to);

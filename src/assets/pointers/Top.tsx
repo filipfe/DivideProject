@@ -2,7 +2,7 @@
 
 import { LegacyRef, forwardRef } from "react";
 
-const Top = forwardRef((props, ref: LegacyRef<SVGPathElement>) => {
+const Top = forwardRef((_, ref: LegacyRef<SVGPathElement>) => {
   return (
     <svg
       width="2"
@@ -14,21 +14,20 @@ const Top = forwardRef((props, ref: LegacyRef<SVGPathElement>) => {
       <path
         ref={ref}
         opacity="0.7"
-        d="M1 0V209"
-        stroke="url(#paint0_linear_1_45)"
-        className="opacity-0"
+        d="M1 209L1 0"
+        stroke="url(#paint0_linear_13_28)"
       />
       <defs>
         <linearGradient
-          id="paint0_linear_1_45"
+          id="paint0_linear_13_28"
           x1="2.34335"
-          y1="261.25"
+          y1="-52.2499"
           x2="-5.9651"
-          y2="260.981"
+          y2="-51.9813"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.259357" stopColor="#0C0818" stopOpacity="0.259259" />
-          <stop offset="1" stopColor="#2D215C" />
+          <stop offset="0.40625" stop-color="#46386D" />
+          <stop offset="1" stop-color="#0C0818" stop-opacity="0.259259" />
         </linearGradient>
       </defs>
     </svg>

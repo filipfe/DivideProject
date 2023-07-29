@@ -1,10 +1,10 @@
 import { Dispatch, SetStateAction } from "react"
 
 export type FormData = {
-    full_name: string,
+    first_name: string,
+    last_name: string;
     email: string,
-    budget: string,
-    description: string
+    message: string
 }
 
 export type FAQ = {
@@ -20,10 +20,4 @@ export type InputProps = {
 export type QuestionIndexState = {
     activeQuestionIndex: number | null,
     setActiveQuestionIndex: Dispatch<SetStateAction<number | null>>
-}
-
-export type ContactField = {
-    name: keyof FormData,
-    label: string,
-    isOptional: boolean
 }

@@ -3,3 +3,7 @@ export type StarProps = {
     height?: string;
     width?: string,
 }
+
+export type Children = {
+    children: JSX.Element | JSX.Element[] | string
+}

@@ -1,72 +1,86 @@
 "use client";
 
 import { FormData } from "@/types/contact";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import Input from "./Input";
-import { CONTACT_FIELDS } from "@/consts/contact";
 import PrimaryButton from "@/components/PrimaryButton";
-import { TypeAnimation } from "react-type-animation";
-import { sendForm } from "@/lib/sendForm";
 import Loader from "@/components/Loader";
+import { TypeAnimation } from "react-type-animation";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { toast } from "react-hot-toast";
 
 export default function Form() {
+  const supabase = createClientComponentClient();
   const [isLoading, setIsLoading] = useState(false);
-  const [status, setStatus] = useState({
-    positive: false,
+  const [formData, setFormData] = useState<FormData>({
+    first_name: "",
+    last_name: "",
+    email: "",
     message: "",
   });
-  const [formData, setFormData] = useState<FormData>({
-    full_name: "",
-    email: "",
-    budget: "",
-    description: "",
-  });
+
+  async function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    const { error } = await supabase.from("messages").insert(formData);
+    console.log(error?.message);
+    error
+      ? toast.error("Try again later!")
+      : toast.success("Message has been sent!");
+  }
 
   return (
     <div className="flex flex-col gap-8 bg-dropdown border-y-[1px] sm:border-[1px] border-[rgba(108,101,131,0.32)] sm:rounded-xl px-[8vw] py-12 sm:p-12">
       <h3 className="text-primary text-xl font-semibold">
         <TypeAnimation
-          repeat={Infinity}
           sequence={[
             "Get in touch with us",
-            3000,
+            4000,
             "Describe your idea",
-            3000,
+            4000,
             "Describe your goals",
-            3000,
+            4000,
             "Make your project real",
-            3000,
+            4000,
             "",
           ]}
+          repeat={Infinity}
         />
       </h3>
-      <form
-        action={() =>
-          sendForm(formData)
-            .then(() =>
-              setStatus({ positive: true, message: "A message has been sent!" })
-            )
-            .catch(() =>
-              setStatus({ positive: false, message: "Something went wrong" })
-            )
-            .finally(() => setIsLoading(false))
-        }
-        onSubmit={() => setIsLoading(true)}
-        className="flex flex-col gap-4"
-      >
-        {CONTACT_FIELDS.map((field) => (
+
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 sm:grid grid-cols-2">
           <Input
             name="contact"
-            id={field.name}
-            required={!field.isOptional}
-            value={formData[field.name]}
-            label={`${field.label}${field.isOptional ? " (optional)" : ""}`}
-            key={field.name}
+            id="first-name"
+            value={formData.first_name}
+            label="First Name"
+            required
             onChange={(e) =>
-              setFormData((prev) => ({ ...prev, [field.name]: e.target.value }))
+              setFormData((prev) => ({ ...prev, first_name: e.target.value }))
             }
           />
-        ))}
+          <Input
+            name="contact"
+            id="last-name"
+            value={formData.last_name}
+            label="Last Name"
+            required
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, last_name: e.target.value }))
+            }
+          />
+        </div>
+        <Input
+          name="contact"
+          id="email"
+          value={formData.email}
+          label="Email"
+          type="email"
+          required
+          onChange={(e) =>
+            setFormData((prev) => ({ ...prev, email: e.target.value }))
+          }
+        />
         <label
           htmlFor="description"
           className="flex flex-col gap-2 cursor-pointer relative"
@@ -77,27 +91,19 @@ export default function Form() {
             <textarea
               className="py-3 px-6 bg-dropdown-active rounded-lg min-h-[1.2in] w-full"
               id="description"
+              required
+              value={formData.message}
               onChange={(e) =>
                 setFormData((prev) => ({
                   ...prev,
-                  description: e.target.value,
+                  message: e.target.value,
                 }))
               }
             />
           </div>
         </label>
         <div className="w-max mt-8">
-          {status.message ? (
-            <span
-              className={status.positive ? "text-green-400" : "text-red-400"}
-            >
-              {status.message}
-            </span>
-          ) : isLoading ? (
-            <Loader />
-          ) : (
-            <PrimaryButton>Send message</PrimaryButton>
-          )}
+          {isLoading ? <Loader /> : <PrimaryButton>Send message</PrimaryButton>}
         </div>
       </form>
     </div>

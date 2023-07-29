@@ -55,8 +55,8 @@ const Pointer = ({
         ref={dotRef}
         className={`absolute overflow-hidden rounded-full opacity-0 ${dotPosition}`}
       >
-        <div className="h-[6px] w-[6px] z-10 rounded-full bg-[#1A1539] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" />
-        <div className="h-[12px] w-[12px] rounded-full bg-[linear-gradient(203.5deg,#2A1793_15.15%,rgba(42,23,147,0)_110.45%)]" />
+        <div className="h-[6px] w-[6px] z-10 rounded-full bg-[#0C0818] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" />
+        <div className="h-[12px] w-[12px] rounded-full bg-[#46386D]/50" />
       </div>
       <SVGElement />
     </div>

@@ -1,10 +1,7 @@
+import { Children } from "@/types/general";
 import Script from "next/script";
 
-export default function GAProvider({
-  children,
-}: {
-  children: React.JSX.Element[];
-}) {
+export default function GAProvider({ children }: Children) {
   return (
     <div>
       {children}

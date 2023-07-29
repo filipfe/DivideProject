@@ -4,6 +4,8 @@ import { Montserrat } from "next/font/google";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import GAProvider from "@/providers/GAProvider";
+import AuthProvider from "@/providers/AuthProvider";
+import { Toaster } from "react-hot-toast";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -24,9 +26,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={montserrat.className}>
         <GAProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <AuthProvider>
+            <Toaster />
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </AuthProvider>
         </GAProvider>
       </body>
     </html>

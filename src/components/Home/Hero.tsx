@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BottomLeft from "../../assets/pointers/BottomLeft";
 import SidewaysDiagonally from "../../assets/pointers/SidewaysDiagonally";
 import Top from "../../assets/pointers/Top";
@@ -24,9 +25,9 @@ export default function Hero() {
           Transform Your Business with Our Cutting-Edge Solutions
         </p>
         <div className="mt-4 flex flex-col sm:flex-row relative z-10 self-stretch sm:self-center mx-auto max-w-[3in] w-full sm:max-w-none sm:items-center gap-4 sm:gap-6 sm:w-max">
-          <HashLink to="contact">
-            <PrimaryButton>Hire us now</PrimaryButton>
-          </HashLink>
+          <Link href="/sign-in">
+            <PrimaryButton>Sign in</PrimaryButton>
+          </Link>
           <HashLink to="work">
             <SecondaryButton>View our work</SecondaryButton>
           </HashLink>
