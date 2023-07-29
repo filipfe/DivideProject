@@ -32,9 +32,10 @@ export default function Page() {
   });
 
   async function saveProject() {
+    const { id, ...project } = newProject;
     const { error } = await supabase
       .from("projects")
-      .insert({ ...newProject, user_id: user.id });
+      .insert({ ...project, user_id: user.id });
     if (error) {
       toast.error(error.message);
     } else {

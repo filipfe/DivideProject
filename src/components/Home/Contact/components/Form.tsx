@@ -22,7 +22,6 @@ export default function Form() {
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const { error } = await supabase.from("messages").insert(formData);
-    console.log(error?.message);
     error
       ? toast.error("Try again later!")
       : toast.success("Message has been sent!");

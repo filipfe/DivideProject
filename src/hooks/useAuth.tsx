@@ -52,6 +52,9 @@ export default function useAuth(): AuthContextType {
       const { data } = await supabase.auth.getSession();
       data.session && logIn(data.session.user);
       setIsLoading(false);
+      supabase.auth.onAuthStateChange((_event, session) => {
+        session && logIn(session.user);
+      });
     }
     fetchSession();
   }, []);

@@ -13,9 +13,9 @@ module.exports = {
         background: "#0C0B13",
         font: "#ACA5B7",
         loading: "#171524",
+        border: "rgba(108,101,131,0.32)",
       },
       backgroundImage: {
-        primary: "linear-gradient(180deg, #3E229F 11.42%, #060310 178%)",
         secondary: "linear-gradient(74.76deg, #1A1725 -3.52%, #100D17 130.83%)",
         text_shadow:
           "linear-gradient(95.98deg, #3B268B -11.21%, rgba(0, 0, 0, 0) 58.33%), linear-gradient(89.77deg, #4027A4 1.4%, rgba(18, 18, 18, 0) 85.2%)",

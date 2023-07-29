@@ -25,7 +25,12 @@ export default function Hero() {
         <p className="text-p text-center font-medium text-sm sm:text-base xl:text-lg max-w-[75%]">
           Transform Your Business with Our Cutting-Edge Solutions
         </p>
-        <CTA />
+        <div className="mt-4 flex flex-col sm:flex-row relative z-10 self-stretch sm:self-center mx-auto max-w-[3in] w-full sm:max-w-none sm:items-center gap-4 sm:gap-6 sm:w-max">
+          <CTA />
+          <HashLink to="work">
+            <SecondaryButton>View our work</SecondaryButton>
+          </HashLink>
+        </div>
         <Pointer
           pointerPosition="-left-[2.5in] -top-[3rem] hidden md:block"
           dotPosition="left-[-4px] top-[-4px]"

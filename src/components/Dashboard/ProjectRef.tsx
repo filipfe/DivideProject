@@ -1,12 +1,17 @@
 import ArrowRight from "@/assets/dashboard/ArrowRight";
+import CustomIcon from "@/assets/dashboard/CustomIcon";
+import DesktopIcon from "@/assets/dashboard/DesktopIcon";
+import MobileIcon from "@/assets/dashboard/MobileIcon";
 import { Project } from "@/types/dashboard";
 import Link from "next/link";
+import Status from "./NewProject/Status";
 
 export default function ProjectRef({
   id,
   title,
   description,
   status,
+  type,
 }: Project) {
   return (
     <Link
@@ -20,21 +25,18 @@ export default function ProjectRef({
         </div>
       </div>
       <p className="text-p text-sm">{description}</p>
-      <p className="text-p text-sm font-medium">
-        Status:{" "}
-        <span
-          className={
-            status === "pending"
-              ? "text-yellow-600"
-              : status === "finished"
-              ? "text-green-600"
-              : "text-blue-600"
-          }
-        >
-          {status.charAt(0).toUpperCase() +
-            status.substring(1).split("_").join(" ")}
-        </span>
-      </p>
+      <div className="flex items-center gap-4 flex-wrap justify-between">
+        <p className="text-p text-sm font-medium">
+          Status: <Status status={status} />
+        </p>
+        {type === "website" ? (
+          <DesktopIcon />
+        ) : type === "mobile_app" ? (
+          <MobileIcon />
+        ) : (
+          <CustomIcon />
+        )}
+      </div>
     </Link>
   );
 }
