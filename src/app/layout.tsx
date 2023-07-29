@@ -1,8 +1,6 @@
 import { Metadata } from "next";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
 import GAProvider from "@/providers/GAProvider";
 import AuthProvider from "@/providers/AuthProvider";
 import { Toaster } from "react-hot-toast";
@@ -27,7 +25,17 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <GAProvider>
           <AuthProvider>
-            <Toaster />
+            <Toaster
+              toastOptions={{
+                style: {
+                  background:
+                    "linear-gradient(335.78deg, #110F1C -75.02%, #0E0C16 85.58%), linear-gradient(344.57deg, rgba(21, 18, 37, 0.15) -19.24%, rgba(30, 26, 50, 0.15) 90.97%)",
+                  color: "#C4BAD3",
+                  borderWidth: 1,
+                  borderColor: "rgba(108,101,131,0.32)",
+                },
+              }}
+            />
             <>{children}</>
           </AuthProvider>
         </GAProvider>
