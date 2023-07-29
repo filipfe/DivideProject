@@ -28,9 +28,7 @@ export default function RootLayout({
         <GAProvider>
           <AuthProvider>
             <Toaster />
-            <Header />
-            <main>{children}</main>
-            <Footer />
+            <>{children}</>
           </AuthProvider>
         </GAProvider>
       </body>

@@ -20,10 +20,20 @@ export default function ProjectRef({
         </div>
       </div>
       <p className="text-p text-sm">{description}</p>
-      <p className="text-p text-sm">
+      <p className="text-p text-sm font-medium">
         Status:{" "}
-        {status.charAt(0).toUpperCase() +
-          status.substring(1).split("_").join(" ")}
+        <span
+          className={
+            status === "pending"
+              ? "text-yellow-600"
+              : status === "finished"
+              ? "text-green-600"
+              : "text-blue-600"
+          }
+        >
+          {status.charAt(0).toUpperCase() +
+            status.substring(1).split("_").join(" ")}
+        </span>
       </p>
     </Link>
   );

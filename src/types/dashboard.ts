@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export enum Status {
     pending,
     in_progress,
@@ -8,7 +10,12 @@ export type Project = {
     id: number;
     title: string;
     description: string;
-    created_at: string;
-    updated_at: string;
+    created_at?: string;
+    updated_at?: string;
     status: keyof typeof Status
+}
+
+export type Step = {
+    title: string;
+    Field: () => React.JSX.Element
 }

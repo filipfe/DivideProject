@@ -13,8 +13,6 @@ export async function POST(req: NextRequest) {
     await supabase.auth.signOut()
   }
 
-  console.log("halo")
-
   return NextResponse.redirect(new URL('/', req.url), {
     status: 302,
   })

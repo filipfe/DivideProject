@@ -1,6 +1,7 @@
 import PrimaryButton from "@/components/PrimaryButton";
 import ProjectsList from "./components/ProjectsList";
 import SearchBar from "@/components/SearchBar";
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -27,9 +28,9 @@ export default function Projects() {
             expertise in web development and design. Discover innovation and
             quality in every step of our journey.
           </p>
-          <div className="w-max">
-            <PrimaryButton>View all work</PrimaryButton>
-          </div>
+          <Link href="/dashboard" className="w-max">
+            <PrimaryButton>Start new project</PrimaryButton>
+          </Link>
         </div>
         <ProjectsList />
       </div>
