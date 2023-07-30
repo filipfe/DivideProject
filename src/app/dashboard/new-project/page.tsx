@@ -28,6 +28,7 @@ export default function Page() {
     id: 0,
     title: "",
     description: "",
+    link: "",
     status: "pending",
   });
 

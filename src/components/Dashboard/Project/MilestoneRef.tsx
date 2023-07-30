@@ -27,9 +27,11 @@ export default function MilestoneRef({
         )}
       </div>
       <div className="flex items-center justify-between flex-wrap gap-4">
-        <div className="flex items-start gap-4">
-          <div className="h-4 w-4 rounded-full bg-[#7856FF]/80" />
-          <p className="text-p font-medium">{description}</p>
+        <div className="grid grid-cols-[16px_1fr] gap-4">
+          <div className="h-4 w-full rounded-full bg-[#7856FF]/80 mt-2" />
+          <p className="text-p font-medium leading-relaxed text-sm">
+            {description}
+          </p>
         </div>
       </div>
       {link && (

@@ -25,7 +25,7 @@ export default function useAuth(): AuthContextType {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: "http://localhost:3000/auth/callback",
+        emailRedirectTo: process.env.NEXT_PUBLIC_SITE_URL + "/auth/callback",
       },
     });
     toast.remove(loadingToast);
@@ -37,6 +37,9 @@ export default function useAuth(): AuthContextType {
   async function signInWithGoogle() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
+      options: {
+        redirectTo: "/auth/callback",
+      },
     });
     console.log(error?.message);
   }

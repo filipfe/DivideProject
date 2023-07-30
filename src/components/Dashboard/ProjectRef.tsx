@@ -24,7 +24,9 @@ export default function ProjectRef({
           <ArrowRight />
         </div>
       </div>
-      <p className="text-p text-sm">{description}</p>
+      <p className="text-p text-sm text-shorten leading-relaxed">
+        {description}
+      </p>
       <div className="flex items-center gap-4 flex-wrap justify-between">
         <p className="text-p text-sm font-medium">
           Status: <Status status={status} />

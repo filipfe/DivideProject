@@ -1,9 +1,12 @@
 import Status from "@/components/Dashboard/NewProject/Status";
 import MilestoneRef from "@/components/Dashboard/Project/MilestoneRef";
+import PrimaryButton from "@/components/PrimaryButton";
 import SecondaryButton from "@/components/SecondaryButton";
+import Star from "@/components/Star";
 import { Project } from "@/types/dashboard";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
+import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
@@ -24,23 +27,32 @@ export default async function Page({ params }: { params: { id: number } }) {
 
   if (!project) return null;
 
-  const { title, description, status } = project as unknown as Project;
+  const { title, description, link, status } = project as unknown as Project;
 
   return (
-    <section className="min-h-screen padding flex flex-col gap-8 py-[2in]">
-      <div className="flex items-center gap-4 flex-wrap justify-between">
-        <h1 className="text-primary font-semibold text-4xl">{title}</h1>
-        <div className="flex items-center gap-4 font-medium">
+    <section className="min-h-screen padding flex flex-col gap-24 py-[1.2in] md:py-[1.6in] xl:py-[2in] xl:grid grid-cols-[3fr_2fr]">
+      <div className="flex flex-col gap-8">
+        <div className="flex items-center gap-2 font-medium">
           Status: <Status status={status} />
         </div>
+        <h1 className="text-primary font-semibold text-4xl">{title}</h1>
+        <p className="text-p leading-relaxed">{description}</p>
+        <div className="flex flex-wrap w-full items-center gap-4">
+          {link && status !== "pending" && (
+            <Link href={link}>
+              <PrimaryButton>Visit preview</PrimaryButton>
+            </Link>
+          )}
+          {status !== "finished" && (
+            <SecondaryButton>Request a report</SecondaryButton>
+          )}
+        </div>
       </div>
-      <p className="text-p">{description}</p>
-      <SecondaryButton>Request a report</SecondaryButton>
-      <div className="flex flex-col gap-8 mt-16">
+      <div className="flex flex-col gap-8">
         <h2 className="text-2xl text-primary font-semibold">
           Threads and milestones
         </h2>
-        <div className="flex flex-col gap-8 sm:grid grid-cols-2">
+        <div className="flex flex-col gap-8">
           {milestones?.length == 0 ? (
             <span className="text-p font-medium text-sm">
               Nothing has been found

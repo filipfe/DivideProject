@@ -127,6 +127,14 @@ body {
   animation: text-shadow 250ms ease-out 1s forwards;
 }
 
+.text-shorten {
+  display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
 @keyframes text-shadow {
   to {
     transform: scaleX(1);

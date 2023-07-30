@@ -24,6 +24,7 @@ export type Project = {
     description: string;
     created_at?: string;
     updated_at?: string;
+    link: string;
     status: keyof typeof Status;
     type?: keyof typeof ProjectType;
 }

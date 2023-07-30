@@ -12,8 +12,8 @@ export default function Status({
         status === "pending"
           ? "text-yellow-600"
           : status === "finished"
-          ? "text-green-600"
-          : "text-blue-600"
+          ? "text-green-500"
+          : "text-[#7856FF]/80"
       } ${props.className}`}
     >
       {status.charAt(0).toUpperCase() +

@@ -3,10 +3,9 @@ import { ButtonProps } from "../types/button";
 export default function SecondaryButton({
   children,
   className,
-  rotate,
   onClick,
   type,
-}: ButtonProps & { rotate?: boolean }) {
+}: ButtonProps) {
   return (
     <div className="relative sm:max-w-max rounded-lg overflow-hidden group">
       <div className="absolute inset-0 border-[1px] z-10 border-[#7856FF]/20 rounded-lg pointer-events-none" />
