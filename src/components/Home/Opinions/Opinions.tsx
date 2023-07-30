@@ -7,6 +7,7 @@ import SearchBar from "@/components/SearchBar";
 import Star from "@/components/Star";
 import { useState } from "react";
 import SecondaryButton from "@/components/SecondaryButton";
+import ArrowDown from "@/assets/dashboard/ArrowDown";
 
 export default function Opinions() {
   const [showMore, setShowMore] = useState(false);
@@ -100,11 +101,17 @@ export default function Opinions() {
         }`}
       >
         <SecondaryButton
-          rotate={showMore}
           className="transition-opacity"
           onClick={() => setShowMore((prev) => !prev)}
         >
           {showMore ? "Show less" : "Show more"}
+          <div
+            className={`transition-transform ${
+              showMore ? "rotate-180" : "rotate-0"
+            }`}
+          >
+            <ArrowDown />
+          </div>
         </SecondaryButton>
         <div
           className={`absolute inset-0 w-full h-full blur-md ${
