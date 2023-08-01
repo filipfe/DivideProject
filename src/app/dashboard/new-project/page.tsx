@@ -12,14 +12,9 @@ import { NewProjectContext } from "@/context/NewProjectContext";
 import { AuthContext } from "@/providers/AuthProvider";
 import { Project } from "@/types/dashboard";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import { Metadata } from "next";
 import { useRouter } from "next/navigation";
 import { FormEvent, useContext, useEffect, useRef, useState } from "react";
 import { toast } from "react-hot-toast";
-
-export const metadata: Metadata = {
-  title: "New project | DivideProject",
-};
 
 export default function Page() {
   const { user } = useContext(AuthContext);
