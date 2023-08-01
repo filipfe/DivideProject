@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google";
 import GAProvider from "@/providers/GAProvider";
 import AuthProvider from "@/providers/AuthProvider";
 import { Toaster } from "react-hot-toast";
+import NextTopLoader from "nextjs-toploader";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.className}>
+        <NextTopLoader color="rgb(108,101,131,0.6)" height={2} />
         <GAProvider>
           <AuthProvider>
             <Toaster
