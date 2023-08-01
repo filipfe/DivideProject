@@ -10,6 +10,7 @@ export default function TypeInput() {
       options={projectTypes}
       value={projectTypes.find((item) => item.value === newProject.type)}
       isSearchable={false}
+      placeholder="Select type"
       className="bg-dropdown text-p rounded-xl border-border border-[1px] py-1 cursor-pointer"
       classNames={{
         menuList: () =>

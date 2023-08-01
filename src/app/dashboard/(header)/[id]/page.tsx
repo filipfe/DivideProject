@@ -2,15 +2,35 @@ import Status from "@/components/Dashboard/NewProject/Status";
 import MilestoneRef from "@/components/Dashboard/Project/MilestoneRef";
 import PrimaryButton from "@/components/PrimaryButton";
 import SecondaryButton from "@/components/SecondaryButton";
-import Star from "@/components/Star";
 import { Project } from "@/types/dashboard";
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import {
+  createServerActionClient,
+  createServerComponentClient,
+} from "@supabase/auth-helpers-nextjs";
+import { Metadata } from "next";
 import { cookies } from "next/headers";
 import Link from "next/link";
 
+type Props = {
+  params: { id: number };
+};
+
 export const dynamic = "force-dynamic";
 
-export default async function Page({ params }: { params: { id: number } }) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const supabase = createServerActionClient({ cookies });
+  const { data: project } = await supabase
+    .from("projects")
+    .select("title, description")
+    .eq("id", params.id)
+    .single();
+  return {
+    title: project?.title || "Dashboard | DivideProject",
+    description: project?.description,
+  };
+}
+
+export default async function Page({ params }: Props) {
   const supabase = createServerComponentClient({ cookies });
 
   const { data: project } = await supabase

@@ -4,10 +4,15 @@ import ProjectRef from "@/components/Dashboard/ProjectRef";
 import Star from "@/components/Star";
 import { Project } from "@/types/dashboard";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { Metadata } from "next";
 import { cookies } from "next/headers";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Dashboard | DivideProject",
+};
 
 export default async function Dashboard() {
   const supabase = createServerComponentClient({ cookies });
@@ -50,9 +55,9 @@ export default async function Dashboard() {
             {projects?.map((project: Project) => (
               <ProjectRef {...project} key={project.id} />
             ))}
-            <div className="bg-background rounded-lg overflow-hidden">
+            <div className="bg-background rounded-lg overflow-hidden min-h-[1in]">
               <Link
-                className="min-h-[1in] bg-[#7856FF]/40 hover:bg-[#7856FF]/50 transition-colors border-[1px] border-[#7856FF]/20 flex items-center justify-center gap-4 text-white font-medium fill-white"
+                className="bg-[#7856FF]/40 h-full hover:bg-[#7856FF]/50 transition-colors border-[1px] border-[#7856FF]/20 flex items-center justify-center gap-4 text-white font-medium fill-white"
                 href="/dashboard/new-project"
               >
                 <PlusIcon />

@@ -3,6 +3,11 @@ import Top from "@/assets/pointers/Top";
 import TopSideways from "@/assets/pointers/TopSideways";
 import Pointer from "@/components/Pointer";
 import Form from "@/components/SignIn/Form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sign in to your dashboard | DivideProject",
+};
 
 export default function SignIn() {
   return (
