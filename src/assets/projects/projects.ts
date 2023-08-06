@@ -1,4 +1,4 @@
-import bezcv from './bezcv.svg'
+import bezcv from './bezcv.png'
 import smarttipz from './smarttipz.png'
 import flippify from './flippify.svg'
 

@@ -11,12 +11,12 @@ export default function ProjectRef({
 }: Project) {
   return (
     <div className={`flex flex-col gap-6`}>
-      <div className="service-header h-[2.5in] rounded-xl overflow-hidden relative">
+      <div className="service-header h-[3in] rounded-xl overflow-hidden relative">
         {thumbnail && (
           <Image
             fill
             sizes="(min-width: 1280px) 50vw, 85vw"
-            className="object-cover opacity-75"
+            className="object-cover"
             src={thumbnail}
             alt={title}
             title={title}
