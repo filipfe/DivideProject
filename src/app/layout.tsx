@@ -38,7 +38,7 @@ export default function RootLayout({
               },
             }}
           />
-          <ScrollProvider>{children}</ScrollProvider>
+          {children}
         </GAProvider>
         <Analytics />
       </body>
