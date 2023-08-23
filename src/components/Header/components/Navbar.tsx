@@ -3,14 +3,11 @@ import PrimaryButton from "../../PrimaryButton";
 import HashLink from "./HashLink";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import { AuthContext } from "@/providers/AuthProvider";
 import PlusIcon from "@/assets/dashboard/PlusIcon";
-import navigate from "@/utils/navigate";
 
 const lineStyle = "h-[3px] w-full transition rounded-xl";
 
 const Navbar = () => {
-  const { isLogged } = useContext(AuthContext);
   const [active, setActive] = useState(false);
   const pathname = usePathname();
   const { push } = useRouter();
@@ -33,43 +30,12 @@ const Navbar = () => {
           active && "-translate-x-full md:translate-x-0"
         } md:left-auto h-screen md:h-full md:items-center w-max`}
       >
-        {isLogged ? (
-          <>
-            <Link
-              className={`transition-colors ${
-                pathname === "/" ? "text-white" : "text-p hover:text-white"
-              }`}
-              href="/"
-            >
-              Home
-            </Link>
-            <Link
-              className={`transition-colors ${
-                pathname === "/dashboard"
-                  ? "text-white"
-                  : "text-p hover:text-white"
-              }`}
-              href="/dashboard"
-            >
-              Dashboard
-            </Link>
-            <PrimaryButton
-              onClick={() => push("/dashboard/new-project")}
-              className="fill-white"
-            >
-              <PlusIcon /> New project
-            </PrimaryButton>
-          </>
-        ) : (
-          <>
-            <HashLink to="services">Services</HashLink>
-            <HashLink to="work">Our work</HashLink>
-            <HashLink to="opinions">Relationship</HashLink>
-            <Link href="/sign-in">
-              <PrimaryButton>Sign in</PrimaryButton>
-            </Link>
-          </>
-        )}
+        <HashLink to="services">Services</HashLink>
+        <HashLink to="work">Our work</HashLink>
+        <HashLink to="opinions">Relationship</HashLink>
+        <HashLink to="contact">
+          <PrimaryButton asChild>Start a project</PrimaryButton>
+        </HashLink>
       </div>
       <div
         onClick={() => setActive((prev) => !prev)}

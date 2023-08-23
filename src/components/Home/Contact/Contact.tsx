@@ -14,7 +14,7 @@ export default function Contact() {
         <FAQ />
       </div>
       <Form />
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 -z-10">
         <Star position="top-[20%] left-[2rem]" />
         <Star position="bottom-[30%] hidden sm:flex left-[8%]" />
         <Star position="top-[20%] hidden sm:flex right-[2rem]" />

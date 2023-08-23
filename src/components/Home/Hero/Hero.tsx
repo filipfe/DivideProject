@@ -1,13 +1,11 @@
-import Link from "next/link";
+import PrimaryButton from "@/components/PrimaryButton";
 import BottomLeft from "../../../assets/pointers/BottomLeft";
 import SidewaysDiagonally from "../../../assets/pointers/SidewaysDiagonally";
 import Top from "../../../assets/pointers/Top";
 import HashLink from "../../Header/components/HashLink";
 import Pointer from "../../Pointer";
-import PrimaryButton from "../../PrimaryButton";
 import SecondaryButton from "../../SecondaryButton";
 import Modal from "../Modal/Modal";
-import CTA from "./CTA";
 
 export default function Hero() {
   return (
@@ -26,9 +24,11 @@ export default function Hero() {
           Transform Your Business with Our Cutting-Edge Solutions
         </p>
         <div className="mt-4 flex flex-col sm:flex-row relative z-10 self-stretch sm:self-center mx-auto max-w-[3in] w-full sm:max-w-none sm:items-center gap-4 sm:gap-6 sm:w-max">
-          <CTA />
+          <HashLink to="contact">
+            <PrimaryButton asChild>Start a project</PrimaryButton>
+          </HashLink>
           <HashLink to="work">
-            <SecondaryButton>View our work</SecondaryButton>
+            <SecondaryButton asChild>View our work</SecondaryButton>
           </HashLink>
         </div>
         <Pointer

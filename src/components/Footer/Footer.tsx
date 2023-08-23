@@ -2,7 +2,7 @@ import { fb, logo } from "@/assets/general";
 import Image from "next/image";
 import HashLink from "../Header/components/HashLink";
 import Link from "next/link";
-import CTA from "../Home/Hero/CTA";
+import PrimaryButton from "../PrimaryButton";
 
 export default function Footer() {
   return (
@@ -23,7 +23,9 @@ export default function Footer() {
         </Link>
       </div>
       <div className="self-center">
-        <CTA />
+        <HashLink to="contact">
+          <PrimaryButton asChild>Start a project</PrimaryButton>
+        </HashLink>
       </div>
       <div className="flex justify-center">
         <small>&copy; 2023 - DivideProject</small>

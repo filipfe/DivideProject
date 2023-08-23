@@ -83,7 +83,7 @@ export const opinions: Opinion[] = [
 
 export const services: Service[] = [
   {
-    title: "Designing UI/UX",
+    title: "UI/UX Design",
     desc: "Elevate user experiences with stunning UI/UX designs that captivate and engage.",
     decorator: (
       <div className="grid grid-cols-2 gap-4 h-full">

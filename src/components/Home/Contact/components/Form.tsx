@@ -45,7 +45,6 @@ export default function Form() {
           repeat={Infinity}
         />
       </h3>
-
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div className="flex flex-col gap-4 sm:grid grid-cols-2">
           <Input
@@ -88,7 +87,7 @@ export default function Form() {
           <div className="relative">
             <div className="absolute inset-0 rounded-lg pointer-events-none border-[1px] border-[rgba(108,101,131,0.32)]" />
             <textarea
-              className="py-3 px-6 bg-dropdown-active rounded-lg min-h-[1.2in] w-full"
+              className="py-3 px-6 bg-dropdown-active rounded-lg min-h-[1.2in] w-full outline-none"
               id="description"
               required
               value={formData.message}

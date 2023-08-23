@@ -32,7 +32,7 @@ export default function ProjectRef({
         </p>
       </div>
       <Link target="_blank" href={link}>
-        <SecondaryButton>See our magic</SecondaryButton>
+        <SecondaryButton asChild>See our magic</SecondaryButton>
       </Link>
     </div>
   );

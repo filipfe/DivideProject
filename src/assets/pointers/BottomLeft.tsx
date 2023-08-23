@@ -25,8 +25,8 @@ const BottomLeft = forwardRef((_, ref: LegacyRef<SVGPathElement>) => {
           y2="-108.542"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#46386D" />
-          <stop offset="1" stop-opacity="0" />
+          <stop stopColor="#46386D" />
+          <stop offset="1" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

@@ -25,9 +25,9 @@ const SidewaysDiagonally = forwardRef((_, ref: LegacyRef<SVGPathElement>) => {
           y2="72.1326"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-opacity="0" />
-          <stop offset="0.0001" stop-opacity="0" />
-          <stop offset="1" stop-color="#46386D" />
+          <stop stopOpacity="0" />
+          <stop offset="0.0001" stopOpacity="0" />
+          <stop offset="1" stopColor="#46386D" />
         </linearGradient>
       </defs>
     </svg>
