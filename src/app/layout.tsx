@@ -4,6 +4,8 @@ import { Montserrat } from "next/font/google";
 import GAProvider from "@/providers/GAProvider";
 import { Toaster } from "react-hot-toast";
 import NextTopLoader from "nextjs-toploader";
+import ScrollProvider from "@/providers/ScrollProvider";
+import { Analytics } from "@vercel/analytics/react";
 
 const montserrat = Montserrat({ subsets: ["latin"], display: "swap" });
 
@@ -36,8 +38,9 @@ export default function RootLayout({
               },
             }}
           />
-          <>{children}</>
+          <ScrollProvider>{children}</ScrollProvider>
         </GAProvider>
+        <Analytics />
       </body>
     </html>
   );

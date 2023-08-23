@@ -5,5 +5,5 @@ export type StarProps = {
 }
 
 export type Children = {
-    children: JSX.Element | JSX.Element[] | string
+    children: React.ReactNode[] | string | React.ReactNode
 }
