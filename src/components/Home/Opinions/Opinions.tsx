@@ -90,11 +90,6 @@ export default function Opinions() {
             ))}
         </div>
       </div>
-      <Star position="top-[20%] left-[2rem]" />
-      <Star position="bottom-[30%] hidden sm:flex left-[8%]" />
-      <Star position="top-[20%] hidden sm:flex right-[2rem]" />
-      <Star position="top-[40%] left-[30%]" height="6in" />
-      <Star position="top-[60%] right-[20%]" height="6in" />
       <div
         className={`absolute pb-[1in] left-0 right-0 bottom-0 w-full h-full flex items-center justify-center transition-all ${
           showMore ? "max-h-[.5in]" : "max-h-[3in]"

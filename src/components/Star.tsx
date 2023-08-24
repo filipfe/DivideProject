@@ -7,7 +7,7 @@ export default function Star({
 }: StarProps) {
   return (
     <div
-      className={`absolute -z-10 flex items-center justify-center ${position}`}
+      className={`absolute -z-10 flex items-center justify-center animate-pulse animation-delay-100 ${position}`}
     >
       <div style={{ width, height: 1 }} className="bg-star bg-center" />
       <div

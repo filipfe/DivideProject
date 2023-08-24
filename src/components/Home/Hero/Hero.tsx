@@ -9,7 +9,7 @@ import Modal from "../Modal/Modal";
 
 export default function Hero() {
   return (
-    <section className="padding pt-[1.4in] md:pt-[1.8in] xl:pt-[2.2in] flex flex-col gap-12 min-h-screen items-center relative overflow-hidden">
+    <section className="padding pt-[1.4in] md:pt-[1.8in] xl:pt-[2.2in] flex flex-col gap-12 min-h-screen items-center relative overflow-hidden z-10 bg-background">
       <div className="flex flex-col items-center gap-6 relative">
         <h1 className="text-4xl md:text-[3rem] xl:text-[4rem] w-full max-w-[12in] text-center leading-tight sm:leading-tight md:leading-tight xl:leading-tight text-primary font-bold">
           Building{" "}

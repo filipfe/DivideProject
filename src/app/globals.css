@@ -185,6 +185,10 @@ text-overflow: ellipsis;
   animation: scale-y 1s ease-in-out 1400ms alternate infinite;
 }
 
+.animation-delay-100 {
+  animation-duration: 3s !important;
+}
+
 @keyframes scale-y {
   from {
     transform: scaleY(100%);

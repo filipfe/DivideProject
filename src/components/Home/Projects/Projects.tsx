@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Projects() {
   return (
     <section
-      className="padding py-[1in] flex flex-col items-center relative"
+      className="padding py-[1in] flex flex-col items-center relative z-10 bg-background"
       id="work"
     >
       <div className="w-full xl:max-w-[90%] flex flex-col xl:grid grid-cols-[4fr_5fr] gap-16 xl:gap-32">

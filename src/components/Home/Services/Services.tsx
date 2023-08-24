@@ -74,11 +74,13 @@ export default function Services() {
           })}
         </div>
       </div>
-      <Star position="top-[20%] left-[2rem]" />
-      <Star position="bottom-[30%] hidden sm:flex left-[8%]" />
-      <Star position="top-[20%] hidden sm:flex right-[2rem]" />
-      <Star position="top-[40%] left-[30%]" height="6in" />
-      <Star position="top-[60%] right-[20%]" height="6in" />
+      <div className="fixed inset-0 top-[15vh] -z-10">
+        <Star position="top-[20%] left-[2rem] delay-500" />
+        <Star position="bottom-[30%] hidden sm:flex left-[8%] delay-500" />
+        <Star position="top-[20%] hidden sm:flex right-[2rem]" />
+        <Star position="top-[40%] left-[30%] delay-500" height="6in" />
+        <Star position="top-[60%] right-[20%]" height="6in" />
+      </div>
     </section>
   );
 }
