@@ -21,10 +21,12 @@ export default function Form() {
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
+    setIsLoading(true);
     const { error } = await supabase.from("messages").insert(formData);
     error
       ? toast.error("Try again later!")
       : toast.success("Message has been sent!");
+    setIsLoading(false);
   }
 
   return (
@@ -101,7 +103,9 @@ export default function Form() {
           </div>
         </label>
         <div className="w-max mt-8">
-          {isLoading ? <Loader /> : <PrimaryButton>Send message</PrimaryButton>}
+          <PrimaryButton disabled={isLoading}>
+            {isLoading ? <Loader /> : "Send"}
+          </PrimaryButton>
         </div>
       </form>
     </div>

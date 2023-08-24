@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "Our team offers a range of services to help you create the digital experience you want.",
   applicationName: "DivideProject website",
   authors: [{ name: "DivideProject", url: "https://www.divideproject.com" }],
+  metadataBase: new URL("https://www.divideproject.com"),
 };
 
 export default function RootLayout({

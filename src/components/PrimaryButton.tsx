@@ -8,13 +8,16 @@ export default function PrimaryButton({
   className = "",
   type = "submit",
   asChild,
+  disabled,
 }: ButtonProps) {
   return (
     <div className="relative">
       <div className="absolute inset-0 border-[1px] border-[#7856FF]/20 rounded-lg pointer-events-none" />
       {asChild ? (
         <div
-          className={`bg-[#7856FF]/40 hover:bg-[#7856FF]/60 transition-colors w-full sm:max-w-max justify-center gap-2 py-[10px] px-6 flex items-center rounded-lg text-white text-sm font-medium ${className}`}
+          className={`bg-[#7856FF]/40 hover:bg-[#7856FF]/60 transition-all w-full sm:max-w-max justify-center gap-2 py-[10px] px-6 flex items-center rounded-lg text-white text-sm font-medium ${
+            disabled ? "opacity-60" : "opacity-100"
+          } ${className}`}
         >
           {children}
         </div>
@@ -22,7 +25,9 @@ export default function PrimaryButton({
         <button
           type={type}
           onClick={onClick}
-          className={`bg-[#7856FF]/40 hover:bg-[#7856FF]/60 transition-colors w-full sm:max-w-max justify-center gap-2 py-[10px] px-6 flex items-center rounded-lg text-white text-sm font-medium ${className}`}
+          className={`bg-[#7856FF]/40 hover:bg-[#7856FF]/60 transition-all w-full sm:max-w-max justify-center gap-2 py-[10px] px-6 flex items-center rounded-lg text-white text-sm font-medium ${
+            disabled ? "opacity-60" : "opacity-100"
+          } ${className}`}
         >
           {children}
         </button>

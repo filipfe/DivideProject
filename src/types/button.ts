@@ -6,4 +6,5 @@ export type ButtonProps = {
     type?: "button" | "submit" | "reset"
     onClick?: (e: MouseEvent<HTMLButtonElement>) => void,
     asChild?: boolean;
+    disabled?: boolean;
 }
