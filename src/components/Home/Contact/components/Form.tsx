@@ -120,8 +120,8 @@ export default function Form() {
             Thank you for registering!
           </strong>
           <p className="text-primary font-medium !opacity-80 max-w-[5in] text-center leading-normal">
-            We will review your order along with the description you provided
-            and respond as soon as possible!
+            We will review your order along with the message you provided and
+            respond as soon as possible!
           </p>
           <PrimaryButton onClick={() => setPopupVisible(false)}>
             Cool!

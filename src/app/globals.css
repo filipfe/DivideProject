@@ -191,6 +191,11 @@ text-overflow: ellipsis;
   animation-duration: 3s !important;
 }
 
+.clip-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
 @keyframes scale-y {
   from {
     transform: scaleY(100%);

@@ -9,10 +9,10 @@ export default function BannerTitle({
   ].join(" ");
 
   return (
-    <h2
-      className={`text-4xl font-bold text-transparent md:text-[4rem] animate-slide-in-right leading-none md:leading-none ${animationClass}`}
+    <span
+      className={`text-4xl select-none font-bold md:text-[4rem] opacity-20 leading-none md:leading-none ${animationClass}`}
     >
       DIVIDE PROJECT
-    </h2>
+    </span>
   );
 }

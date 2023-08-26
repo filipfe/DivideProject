@@ -23,7 +23,7 @@ export default function Dropdown({
           onClick={() => setActiveQuestionIndex(isActive ? null : id)}
           className="bg-dropdown border-[1px] border-[rgba(108,101,131,0.32)] overflow-hidden rounded-xl p-6 relative flex flex-col"
         >
-          <div className="flex items-center justify-between relative z-10">
+          <div className="flex items-center justify-between relative z-10 w-full">
             <h3 className="text-p text-left leading-relaxed font-medium">
               {question}
             </h3>
