@@ -138,7 +138,8 @@ export const projects: Project[] = [
     link: "/",
   },
   {
-    title: "SmartTipz - online video platform for sharing and watching content",
+    title:
+      "Case Study: Pricing Plans - four different layouts, one style guide",
     desc: "Tailored pricing solutions designed to fit the client needs. Choose from the four distinct layouts based on the given style guide.",
     thumbnail: pricing,
     link: "https://dpricing.netlify.app/",
