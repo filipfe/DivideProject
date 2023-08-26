@@ -10,7 +10,7 @@ export default function BannerTitle({
 
   return (
     <span
-      className={`text-4xl select-none font-bold md:text-[4rem] opacity-20 leading-none md:leading-none ${animationClass}`}
+      className={`text-4xl xl:text-8xl bg-banner-inner bg-clip-text text-transparent select-none font-bold md:text-[4rem] leading-none md:leading-none ${animationClass}`}
     >
       DIVIDE PROJECT
     </span>
