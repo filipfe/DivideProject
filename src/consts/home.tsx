@@ -144,7 +144,6 @@ export const projects: Project[] = [
     thumbnail: pricing,
     link: "https://dpricing.netlify.app/",
   },
-
   {
     title: "Flippify - our ultimate educational app for flashcards and notes",
     desc: "Discover a whole new way of learning with Flippify. Seamlessly flip through interactive flashcards and access concise, organized notes on the go. Whether you're a student, professional, or lifelong learner, Flippify empowers you to master any subject with ease.",
