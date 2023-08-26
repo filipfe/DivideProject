@@ -1,5 +1,10 @@
 import { defaultUser } from "@/assets/home/home";
-import { bezcv, flippify, smarttipz } from "@/assets/projects/projects";
+import {
+  bezcv,
+  flippify,
+  pricing,
+  smarttipz,
+} from "@/assets/projects/projects";
 import { LineOfCode } from "@/components/Home/Modal/LineOfCode";
 import { Opinion } from "@/types/opinions";
 import { Project } from "@/types/projects";
@@ -130,12 +135,19 @@ export const projects: Project[] = [
     title: "SmartTipz - online video platform for sharing and watching content",
     desc: "Choose from the normal and business account. Explore videos and earn on uploading content through tipping system.",
     thumbnail: smarttipz,
-    link: "https://www.smarttipz.com",
+    link: "/",
   },
+  {
+    title: "SmartTipz - online video platform for sharing and watching content",
+    desc: "Tailored pricing solutions designed to fit the client needs. Choose from the four distinct layouts based on the given style guide.",
+    thumbnail: pricing,
+    link: "https://dpricing.netlify.app/",
+  },
+
   {
     title: "Flippify - our ultimate educational app for flashcards and notes",
     desc: "Discover a whole new way of learning with Flippify. Seamlessly flip through interactive flashcards and access concise, organized notes on the go. Whether you're a student, professional, or lifelong learner, Flippify empowers you to master any subject with ease.",
     thumbnail: flippify,
-    link: "https://expo.dev/accounts/divideproject/projects/flippify/builds/b0d36768-de9a-4b55-b728-7307c836ea4b",
+    link: "https://expo.dev/accounts/divideproject/projects/flippify/builds/b21bbb1a-91aa-48f4-a386-ffe7a2a81dac",
   },
 ];
