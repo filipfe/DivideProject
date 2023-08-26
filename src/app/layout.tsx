@@ -11,7 +11,7 @@ const montserrat = Montserrat({ subsets: ["latin"], display: "swap" });
 export const metadata: Metadata = {
   title: "DivideProject - Building custom web solutions that drive results",
   description:
-    "Our team offers a range of services to help you create the digital experience you want.",
+    "Unlock the potential of your digital presence with DivideProject. We specialize in crafting high-performance websites, mobile apps, and web apps using NextJS, React, and Tailwind CSS. Elevate your online impact with our cutting-edge solutions.",
   applicationName: "DivideProject website",
   authors: [{ name: "DivideProject", url: "https://www.divideproject.com" }],
   metadataBase: new URL("https://www.divideproject.com"),
