@@ -6,7 +6,7 @@ import PrimaryButton from "../PrimaryButton";
 
 export default function Footer() {
   return (
-    <footer className="min-h-[2.5in] bg-banner padding pt-8 pb-6 flex flex-col justify-between relative z-50">
+    <footer className="min-h-[2.5in] bg-banner padding pt-8 pb-6 flex flex-col justify-between relative z-40">
       <div className="flex items-center justify-between gap-4 flex-wrap">
         <Image width={48} height={48} src={logo} alt="DivideProject logo" />
         <div className="flex items-center justify-center gap-8 text-sm font-medium">
