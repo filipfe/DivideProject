@@ -22,6 +22,6 @@ export async function sendMail(data: FormData) {
         })
         return resp[0].statusCode
     } catch(err) {
-        return 0;
+        return err;
     }
 }

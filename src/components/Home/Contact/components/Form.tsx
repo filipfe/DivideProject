@@ -44,6 +44,7 @@ export default function Form() {
               setPopupVisible(true);
               formRef.current?.reset();
             } else {
+              console.log(statusCode);
               toast.error("An error occured!");
             }
           })
