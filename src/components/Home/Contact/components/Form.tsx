@@ -39,12 +39,12 @@ export default function Form() {
         ref={(ref) => ref && (formRef.current = ref)}
         action={(data) =>
           startTransition(async () => {
-            const statusCode = await sendMail(data);
-            if (statusCode === 202) {
+            const resp = await sendMail(data);
+            if (resp.status === "success") {
               setPopupVisible(true);
               formRef.current?.reset();
             } else {
-              console.log(statusCode);
+              console.log(resp.error);
               toast.error("An error occured!");
             }
           })

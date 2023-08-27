@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "DivideProject - Building custom web solutions that drive results",
     description:
-      "Unlock the potential of your digital presence with DivideProject. We specialize in crafting high-performance websites, mobile apps, and web apps using NextJS, React, and Tailwind CSS. Elevate your online impact with our cutting-edge solutions.",
+      "Unlock the potential of your digital presence with DivideProject. We specialize in crafting high-performance websites, mobile apps, and web apps using NextJS, React, and Tailwind CSS.",
   },
 };
 
