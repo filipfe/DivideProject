@@ -1,7 +1,6 @@
 import PrimaryButton from "@/components/PrimaryButton";
 import ProjectsList from "./components/ProjectsList";
 import SearchBar from "@/components/SearchBar";
-import Link from "next/link";
 import HashLink from "@/components/Header/components/HashLink";
 
 export default function Projects() {

@@ -10,7 +10,7 @@ export default function ProjectRef({
   link,
 }: Project) {
   return (
-    <div className={`flex flex-col gap-6`}>
+    <article className={`flex flex-col gap-6`}>
       <div className="service-header h-[3in] rounded-xl overflow-hidden relative">
         {thumbnail && (
           <Image
@@ -34,6 +34,6 @@ export default function ProjectRef({
       <Link target="_blank" href={link}>
         <SecondaryButton asChild>See our magic</SecondaryButton>
       </Link>
-    </div>
+    </article>
   );
 }
