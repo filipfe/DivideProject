@@ -15,6 +15,17 @@ export const metadata: Metadata = {
   applicationName: "DivideProject website",
   authors: [{ name: "DivideProject", url: "https://www.divideproject.com" }],
   metadataBase: new URL("https://www.divideproject.com"),
+  openGraph: {
+    title: "DivideProject - Building custom web solutions that drive results",
+    description:
+      "Unlock the potential of your digital presence with DivideProject. We specialize in crafting high-performance websites, mobile apps, and web apps using NextJS, React, and Tailwind CSS. Elevate your online impact with our cutting-edge solutions.",
+    url: "https://www.divideproject.com",
+  },
+  twitter: {
+    title: "DivideProject - Building custom web solutions that drive results",
+    description:
+      "Unlock the potential of your digital presence with DivideProject. We specialize in crafting high-performance websites, mobile apps, and web apps using NextJS, React, and Tailwind CSS. Elevate your online impact with our cutting-edge solutions.",
+  },
 };
 
 export default function RootLayout({
