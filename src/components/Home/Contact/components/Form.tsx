@@ -1,36 +1,22 @@
 "use client";
 
-import { FormData } from "@/types/contact";
-import { FormEvent, useEffect, useState } from "react";
+import { useRef, useState, useTransition } from "react";
 import Input from "./Input";
 import PrimaryButton from "@/components/PrimaryButton";
 import Loader from "@/components/Loader";
 import { TypeAnimation } from "react-type-animation";
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import { toast } from "react-hot-toast";
 import Pointer from "@/components/Pointer";
 import Top from "@/assets/pointers/Top";
 import SidewaysDiagonally from "@/assets/pointers/SidewaysDiagonally";
 import BottomLeft from "@/assets/pointers/BottomLeft";
+import { sendMail } from "@/actions/contact";
+import { toast } from "react-hot-toast";
 
 export default function Form() {
-  const supabase = createClientComponentClient();
-  const [isLoading, setIsLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement>();
   const [popupVisible, setPopupVisible] = useState(false);
-  const [formData, setFormData] = useState<FormData>({
-    first_name: "",
-    last_name: "",
-    email: "",
-    message: "",
-  });
+  const [isPending, startTransition] = useTransition();
 
-  async function handleSubmit(e: FormEvent) {
-    e.preventDefault();
-    setIsLoading(true);
-    const { error } = await supabase.from("messages").insert(formData);
-    error ? toast.error("Try again later!") : setPopupVisible(true);
-    setIsLoading(false);
-  }
   return (
     <div className="flex flex-col gap-8 bg-dropdown border-y-[1px] sm:border-[1px] border-[rgba(108,101,131,0.32)] sm:rounded-xl px-[8vw] py-12 sm:p-12">
       <h3 className="text-primary text-xl font-semibold">
@@ -49,40 +35,31 @@ export default function Form() {
           repeat={Infinity}
         />
       </h3>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <form
+        ref={(ref) => ref && (formRef.current = ref)}
+        action={(data) =>
+          startTransition(async () => {
+            const statusCode = await sendMail(data);
+            if (statusCode === 202) {
+              setPopupVisible(true);
+              formRef.current?.reset();
+            } else {
+              toast.error("An error occured!");
+            }
+          })
+        }
+        className="flex flex-col gap-4"
+      >
         <div className="flex flex-col gap-4 sm:grid grid-cols-2">
           <Input
-            name="contact"
             id="first-name"
-            value={formData.first_name}
+            name="first-name"
             label="First Name"
             required
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, first_name: e.target.value }))
-            }
           />
-          <Input
-            name="contact"
-            id="last-name"
-            value={formData.last_name}
-            label="Last Name"
-            required
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, last_name: e.target.value }))
-            }
-          />
+          <Input id="last-name" name="last-name" label="Last Name" required />
         </div>
-        <Input
-          name="contact"
-          id="email"
-          value={formData.email}
-          label="Email"
-          type="email"
-          required
-          onChange={(e) =>
-            setFormData((prev) => ({ ...prev, email: e.target.value }))
-          }
-        />
+        <Input id="email" name="email" label="Email" type="email" required />
         <label
           htmlFor="description"
           className="flex flex-col gap-2 cursor-pointer relative"
@@ -93,20 +70,14 @@ export default function Form() {
             <textarea
               className="py-3 px-6 bg-dropdown-active rounded-lg min-h-[1.2in] w-full outline-none"
               id="description"
+              name="message"
               required
-              value={formData.message}
-              onChange={(e) =>
-                setFormData((prev) => ({
-                  ...prev,
-                  message: e.target.value,
-                }))
-              }
             />
           </div>
         </label>
         <div className="w-max mt-8">
-          <PrimaryButton disabled={isLoading}>
-            {isLoading ? <Loader /> : "Send"}
+          <PrimaryButton disabled={isPending}>
+            {isPending ? <Loader /> : "Send"}
           </PrimaryButton>
         </div>
       </form>
