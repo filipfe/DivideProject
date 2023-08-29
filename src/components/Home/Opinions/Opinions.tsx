@@ -1,15 +1,14 @@
 "use client";
 
-import { opinions } from "@/consts/home";
 import Control from "react-control-js";
-import OpinionRef from "./OpinionRef";
+import OpinionRef from "./components/OpinionRef";
 import SearchBar from "@/components/SearchBar";
-import Star from "@/components/Star";
 import { useState } from "react";
 import SecondaryButton from "@/components/SecondaryButton";
 import ArrowDown from "@/assets/dashboard/ArrowDown";
+import { Dict } from "@/dictionaries/dictionaries";
 
-export default function Opinions() {
+export default function Opinions({ dict }: { dict: Dict["opinions"] }) {
   const [showMore, setShowMore] = useState(false);
   return (
     <section
@@ -24,13 +23,7 @@ export default function Opinions() {
           y={40}
           element={
             <SearchBar
-              sequence={[
-                "What values do I get from them?",
-                4000,
-                "What would be my profit?",
-                4000,
-                "",
-              ]}
+              sequence={[dict.searchBar[0], 4000, dict.searchBar[1], 4000, ""]}
             />
           }
         />
@@ -40,15 +33,15 @@ export default function Opinions() {
           onScroll
           y={40}
           element={
-            <h2 className="text-[2rem] md:text-4xl xl:text-5xl w-full max-w-[8in] text-center leading-tight sm:leading-tight md:leading-tight xl:leading-tight bg-[linear-gradient(46.93deg,#FFFFFF_21.95%,#3B2398_179.76%)] font-bold bg-clip-text text-transparent">
-              Relationship built on trust
+            <h2 className="text-[2rem] md:text-4xl xl:text-5xl w-full max-w-[10in] text-center leading-tight sm:leading-tight md:leading-tight xl:leading-tight bg-[linear-gradient(46.93deg,#FFFFFF_21.95%,#3B2398_179.76%)] font-bold bg-clip-text text-transparent">
+              {dict.title}
             </h2>
           }
         />
       </div>
       <div className="flex flex-col gap-8 xl:grid grid-cols-3 xl:max-w-[85%]">
         <div className="flex flex-col gap-8">
-          {opinions
+          {dict.opinionList
             .filter((opinion) => opinion.column === 1)
             .map((opinion) => (
               <Control
@@ -62,7 +55,7 @@ export default function Opinions() {
             ))}
         </div>
         <div className="flex flex-col gap-8 xl:mt-8">
-          {opinions
+          {dict.opinionList
             .filter((opinion) => opinion.column === 2)
             .map((opinion) => (
               <Control
@@ -76,7 +69,7 @@ export default function Opinions() {
             ))}
         </div>
         <div className="flex flex-col gap-8">
-          {opinions
+          {dict.opinionList
             .filter((opinion) => opinion.column === 3)
             .map((opinion) => (
               <Control

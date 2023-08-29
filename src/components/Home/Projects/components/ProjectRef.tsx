@@ -3,15 +3,23 @@ import { Project } from "../../../../types/projects";
 import SecondaryButton from "../../../SecondaryButton";
 import Link from "next/link";
 
+type Props = {
+  button: {
+    text: string;
+    disabled: boolean;
+  };
+};
+
 export default function ProjectRef({
   title = "One of our latest projects",
   desc = "Lorem ipsum dolor sit amet consectetur. Eget enim adipiscing arcu lobortis tincidunt dictum elit. orem ipsum ",
   thumbnail,
   link,
-}: Project) {
+  button,
+}: Project & Props) {
   return (
     <article className={`flex flex-col gap-6`}>
-      <div className="service-header h-[3in] rounded-xl overflow-hidden relative">
+      <figure className="service-header h-[3in] rounded-xl overflow-hidden relative">
         {thumbnail && (
           <Image
             fill
@@ -22,7 +30,8 @@ export default function ProjectRef({
             title={title}
           />
         )}
-      </div>
+        <figcaption className="absolute -z-10 opacity-0">{title}</figcaption>
+      </figure>
       <div className="flex flex-col gap-2 relative z-10">
         <h3 className="text-primary font-semibold text-xl xl:text-2xl">
           {title}
@@ -31,9 +40,15 @@ export default function ProjectRef({
           {desc}
         </p>
       </div>
-      <Link target="_blank" href={link}>
-        <SecondaryButton asChild>See our magic</SecondaryButton>
-      </Link>
+      {button.disabled ? (
+        <SecondaryButton disabled asChild>
+          {button.text}
+        </SecondaryButton>
+      ) : (
+        <Link target="_blank" href={link}>
+          <SecondaryButton asChild>{button.text}</SecondaryButton>
+        </Link>
+      )}
     </article>
   );
 }

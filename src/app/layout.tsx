@@ -28,13 +28,19 @@ export const metadata: Metadata = {
   },
 };
 
+export async function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "pl" }];
+}
+
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: { lang: string };
 }) {
   return (
-    <html lang="en">
+    <html lang={params.lang}>
       <body className={montserrat.className}>
         <NextTopLoader color="rgb(108,101,131,0.6)" height={2} />
         <GAProvider>

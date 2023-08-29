@@ -12,8 +12,9 @@ import BottomLeft from "@/assets/pointers/BottomLeft";
 import { sendMail } from "@/actions/contact";
 import { toast } from "react-hot-toast";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Dict } from "@/dictionaries/dictionaries";
 
-export default function Form() {
+export default function Form({ dict }: { dict: Dict["contact"]["form"] }) {
   const searchParams = useSearchParams();
   const formRef = useRef<HTMLFormElement>();
   const wrapperRef = useRef<HTMLDivElement>();
@@ -40,13 +41,13 @@ export default function Form() {
         <h3 className="text-primary text-xl font-semibold">
           <TypeAnimation
             sequence={[
-              "Get in touch with us",
+              dict.searchBar[0],
               4000,
-              "Describe your idea",
+              dict.searchBar[1],
               4000,
-              "Describe your goals",
+              dict.searchBar[2],
               4000,
-              "Make your project real",
+              dict.searchBar[3],
               4000,
               "",
             ]}
@@ -70,20 +71,23 @@ export default function Form() {
           className="flex flex-col gap-4 scroll-p-[4in]"
         >
           <div className="flex flex-col gap-4 sm:grid grid-cols-2">
-            <Input
-              id="first-name"
-              name="first-name"
-              label="First Name"
-              required
-            />
-            <Input id="last-name" name="last-name" label="Last Name" required />
+            <Input id="first-name" name="first-name" required>
+              {dict.fields.firstName}
+            </Input>
+            <Input id="last-name" name="last-name" required>
+              {dict.fields.lastName}
+            </Input>
           </div>
-          <Input id="email" name="email" label="Email" type="email" required />
+          <Input id="email" name="email" type="email" required>
+            {dict.fields.email}
+          </Input>
           <label
             htmlFor="description"
             className="flex flex-col gap-2 cursor-pointer relative"
           >
-            <span className="text-sm text-primary font-medium">Message</span>
+            <span className="text-sm text-primary font-medium">
+              {dict.fields.message}
+            </span>
             <div className="relative">
               <div className="absolute inset-0 rounded-lg pointer-events-none border-[1px] border-[rgba(108,101,131,0.32)]" />
               <textarea
@@ -96,7 +100,7 @@ export default function Form() {
           </label>
           <div className="w-max mt-8">
             <PrimaryButton disabled={isPending}>
-              {isPending ? <Loader /> : "Send"}
+              {isPending ? <Loader /> : dict.fields.send}
             </PrimaryButton>
           </div>
         </form>
@@ -107,11 +111,10 @@ export default function Form() {
         >
           <div className="flex flex-col gap-8 items-center relative bg-dropdown border-y-[1px] sm:border-[1px] border-[rgba(108,101,131,0.32)] sm:rounded-xl px-[8vw] py-12 sm:p-12">
             <strong className="text-3xl text-primary text-center">
-              Thank you for registering!
+              {dict.success.title}
             </strong>
             <p className="text-primary font-medium !opacity-80 max-w-[5in] text-center leading-normal">
-              We will review your order along with the message you provided and
-              respond as soon as possible!
+              {dict.success.paragraph}
             </p>
             <PrimaryButton onClick={() => setPopupVisible(false)}>
               Cool!

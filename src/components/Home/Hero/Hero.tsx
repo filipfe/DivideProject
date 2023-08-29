@@ -6,29 +6,31 @@ import HashLink from "../../Header/components/HashLink";
 import Pointer from "../../Pointer";
 import SecondaryButton from "../../SecondaryButton";
 import Modal from "../Modal/Modal";
+import { Dict } from "@/dictionaries/dictionaries";
 
-export default function Hero() {
+export default function Hero({ dict }: { dict: Dict["hero"] }) {
   return (
     <section className="padding pt-[1.4in] md:pt-[1.8in] xl:pt-[2.2in] flex flex-col gap-12 min-h-screen items-center relative overflow-hidden z-10 bg-background">
       <div className="flex flex-col items-center gap-6 relative">
         <h1 className="text-4xl md:text-[3rem] xl:text-[4rem] w-full max-w-[12in] text-center leading-tight sm:leading-tight md:leading-tight xl:leading-tight text-primary font-bold">
-          Building{" "}
+          {dict.title.prefix}{" "}
           <span className="relative inline-block text-primary min-w-max">
             <div className="text-shadow bg-text_shadow absolute -z-10 -left-1 -right-[.5ch] -top-2 -bottom-2" />
-            Custom Web <span className="hidden sm:inline">Solutions</span>
+            {dict.title.markedLeft}{" "}
+            <span className="hidden sm:inline">{dict.title.markedRight}</span>
           </span>{" "}
-          <span className="inline sm:hidden">Solutions </span>
-          that Drive Results
+          <span className="inline sm:hidden">{dict.title.sufixLeft} </span>
+          {dict.title.sufixRight}
         </h1>
         <p className="text-p text-center font-medium text-sm sm:text-base xl:text-lg max-w-[75%]">
-          Transform Your Business with Our Cutting-Edge Solutions
+          {dict.paragraph}
         </p>
         <div className="mt-4 flex flex-col sm:flex-row relative z-10 self-stretch sm:self-center mx-auto max-w-[3in] w-full sm:max-w-none sm:items-center gap-4 sm:gap-6 sm:w-max">
           <HashLink to="contact">
-            <PrimaryButton asChild>Start a project</PrimaryButton>
+            <PrimaryButton asChild>{dict.primary}</PrimaryButton>
           </HashLink>
           <HashLink to="work">
-            <SecondaryButton asChild>View our work</SecondaryButton>
+            <SecondaryButton asChild>{dict.secondary}</SecondaryButton>
           </HashLink>
         </div>
         <Pointer

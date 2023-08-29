@@ -1,16 +1,16 @@
-import { useState, useEffect, useContext } from "react";
+"use client";
+
+import { useState, useEffect } from "react";
 import PrimaryButton from "../../PrimaryButton";
 import HashLink from "./HashLink";
-import { usePathname, useRouter } from "next/navigation";
-import Link from "next/link";
-import PlusIcon from "@/assets/dashboard/PlusIcon";
+import { usePathname } from "next/navigation";
+import { Dict } from "@/dictionaries/dictionaries";
 
 const lineStyle = "h-[3px] w-full transition rounded-xl";
 
-const Navbar = () => {
+const Navbar = ({ dict }: { dict: Dict["navigation"] }) => {
   const [active, setActive] = useState(false);
   const pathname = usePathname();
-  const { push } = useRouter();
 
   useEffect(() => {
     setActive(false);
@@ -30,11 +30,11 @@ const Navbar = () => {
           active && "-translate-x-full md:translate-x-0"
         } md:left-auto h-screen md:h-full md:items-center w-max`}
       >
-        <HashLink to="services">Services</HashLink>
-        <HashLink to="work">Our work</HashLink>
-        <HashLink to="opinions">Relationship</HashLink>
+        <HashLink to="services">{dict.services}</HashLink>
+        <HashLink to="work">{dict.work}</HashLink>
+        <HashLink to="opinions">{dict.opinions}</HashLink>
         <HashLink to="contact">
-          <PrimaryButton asChild>Start a project</PrimaryButton>
+          <PrimaryButton asChild>{dict.primary}</PrimaryButton>
         </HashLink>
       </div>
       <div

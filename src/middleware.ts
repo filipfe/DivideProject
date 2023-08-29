@@ -1,21 +1,36 @@
-import { createMiddlewareClient } from '@supabase/auth-helpers-nextjs'
 import { NextRequest, NextResponse } from 'next/server'
+import Negotiator from 'negotiator'
+import { match as matchLocale } from '@formatjs/intl-localematcher'
+
+const locales = ['en', 'pl']
+const defaultLocale = 'en'
+
+type Headers = {
+  [key: string]: string;
+}
+
+function getLocale(req: NextRequest) {
+  const headers: Headers = {}
+  req.headers.forEach((value, key) => (headers[key] = value))
+  const languages = new Negotiator({ headers }).languages()
+  const locale = matchLocale(languages, locales, defaultLocale);
+  return locale
+}
 
 export async function middleware(req: NextRequest) {
-  const res = NextResponse.next()
-  const supabase = createMiddlewareClient({ req, res })
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
-  if (!user && req.nextUrl.pathname !== '/') {
-    return NextResponse.redirect(new URL('/sign-in', req.url))
+  const {pathname} = req.nextUrl
+  const pathnameIsMissingLocale = locales.every(
+    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+  )
+ 
+  if (pathnameIsMissingLocale) {
+    const locale = getLocale(req)
+    return NextResponse.redirect(
+      new URL(`/${locale}/${pathname}`, req.url)
+    )
   }
-
-  return res
 }
 
 export const config = {
-  matcher: ['/', '/dashboard'],
+  matcher: ['/((?!_next).*)'],
 }
