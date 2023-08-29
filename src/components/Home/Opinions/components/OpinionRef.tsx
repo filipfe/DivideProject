@@ -1,8 +1,9 @@
+import { defaultUser } from "@/assets/home/home";
 import { Opinion } from "@/types/opinions";
 import Image from "next/image";
 
 export default function OpinionRef({ content, user }: Opinion) {
-  const { fullName, image, position } = user;
+  const { fullName, position } = user;
   return (
     <div className="bg-opinion border-[#33295B] rounded-xl border-[1px] p-6 flex flex-col gap-6">
       <div className="flex items-center gap-4">
@@ -11,7 +12,7 @@ export default function OpinionRef({ content, user }: Opinion) {
             width={48}
             height={48}
             className="absolute inset-0 w-full h-full"
-            src={image}
+            src={defaultUser}
             title={`${fullName}'s opinion`}
             alt={`${fullName}'s opinion`}
           />

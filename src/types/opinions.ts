@@ -1,9 +1,8 @@
 export type Opinion = {
     content: string,
-    column: 1 | 2 | 3,
+    column: number,
     user: {
         fullName: string,
-        image: string,
         position: string
     }
 }

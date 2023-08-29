@@ -1,5 +1,4 @@
 import { dropdownArrow } from "@/assets/home/contact/contact";
-import { FAQ_QUESTIONS } from "@/consts/contact";
 import { FAQ, QuestionIndexState } from "@/types/contact";
 import Image from "next/image";
 import Control from "react-control-js";

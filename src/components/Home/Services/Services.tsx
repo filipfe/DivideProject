@@ -1,12 +1,13 @@
 "use client";
 
 import SearchBar from "@/components/SearchBar";
-import { services } from "@/consts/home";
+import { serviceDecorators } from "@/consts/home";
 import Control from "react-control-js";
 import ServiceRef from "./ServiceRef";
 import Star from "@/components/Star";
+import { Dict } from "@/dictionaries/dictionaries";
 
-export default function Services() {
+export default function Services({ dict }: { dict: Dict["services"] }) {
   return (
     <section
       className="px-[8vw] md:px-[12vw] py-[1in] flex flex-col items-center relative overflow-x-hidden"
@@ -22,9 +23,9 @@ export default function Services() {
             element={
               <SearchBar
                 sequence={[
-                  "How do they affect my business?",
+                  dict.searchBar.first,
                   4000,
-                  "How am I going to profit from them?",
+                  dict.searchBar.second,
                   4000,
                   "",
                 ]}
@@ -36,21 +37,25 @@ export default function Services() {
             opacity={1}
             onScroll
             y={40}
+            className="min-w-full"
             element={
               <div className="flex flex-col sm:flex-row justify-between gap-4">
-                <h2 className="text-[2rem] md:text-4xl xl:text-5xl w-full max-w-[8in] leading-tight sm:leading-tight md:leading-tight xl:leading-tight bg-[linear-gradient(46.93deg,#FFFFFF_21.95%,#3B2398_179.76%)] font-bold bg-clip-text text-transparent">
-                  Services with attention to detail
+                <h2
+                  className={`text-[2rem] md:text-4xl xl:text-5xl w-full flex-1 flex-grow justify-self-stretch min-w-[16ch] ${
+                    dict.lang === "pl" ? "max-w-[20ch]" : "max-w-[8in]"
+                  } leading-tight sm:leading-tight md:leading-tight xl:leading-tight bg-[linear-gradient(46.93deg,#FFFFFF_21.95%,#3B2398_179.76%)] font-bold bg-clip-text text-transparent`}
+                >
+                  {dict.title}
                 </h2>
-                <p className="font-medium text-sm md:text-base text-[#B8B5C3] leading-relaxed mt-4 max-w-[4in]">
-                  Our team offers a range of services to help you create the
-                  digital experience you want.
+                <p className="font-medium text-sm min-w-0 md:text-base flex-grow-0 text-[#B8B5C3] max-w-[4in] leading-relaxed mt-4">
+                  {dict.paragraph}
                 </p>
               </div>
             }
           />
         </div>
         <div className="flex flex-col gap-8 md:flex-row md:flex-wrap justify-center 2xl:justify-normal 2xl:grid grid-cols-3 relative">
-          {services.map((service, index) => {
+          {dict.serviceList.map((service, index) => {
             const translate = {
               ...((index === 0 || index === 2) && {
                 x: index === 0 ? -40 : 40,
@@ -66,7 +71,11 @@ export default function Services() {
                 viewPort={0.7}
                 {...translate}
                 element={
-                  <ServiceRef {...service} key={service.title + "ref"} />
+                  <ServiceRef
+                    {...service}
+                    decorator={serviceDecorators[index]}
+                    key={service.title + "ref"}
+                  />
                 }
                 key={service.title}
               />

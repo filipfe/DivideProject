@@ -13,10 +13,6 @@ export type FAQ = {
     answer: string
 }
 
-export type InputProps = {
-    label?: string,
-}
-
 export type QuestionIndexState = {
     activeQuestionIndex: number | null,
     setActiveQuestionIndex: Dispatch<SetStateAction<number | null>>

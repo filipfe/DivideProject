@@ -1,17 +1,17 @@
 "use client";
 
-import { FAQ_QUESTIONS } from "@/consts/contact";
 import { useState } from "react";
 import Dropdown from "./Dropdown";
+import { Dict } from "@/dictionaries/dictionaries";
 
-export default function FAQ() {
+export default function FAQ({ dict }: { dict: Dict["contact"]["faq"] }) {
   const [activeQuestionIndex, setActiveQuestionIndex] = useState<number | null>(
     null
   );
 
   return (
     <div className="flex flex-col gap-4">
-      {FAQ_QUESTIONS.map((question) => (
+      {dict.map((question) => (
         <Dropdown
           {...question}
           activeQuestionIndex={activeQuestionIndex}

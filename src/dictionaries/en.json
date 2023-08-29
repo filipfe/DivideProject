@@ -1,0 +1,185 @@
+{
+    "navigation": {
+        "services": "Services",
+        "work": "Our work",
+        "opinions": "Relationship",
+        "primary": "Start a project"
+    },
+    "hero": {
+        "title": {
+            "prefix": "Building",
+            "markedLeft": "Custom Web",
+            "markedRight": "Solutions",
+            "sufixLeft": "Solutions",
+            "sufixRight": "that Drive Results"
+        },
+        "paragraph": "Transform Your Business with Our Cutting-Edge Solutions",
+        "primary": "Start a project",
+        "secondary": "View our work"
+    },
+    "services": {
+        "lang": "en",
+        "searchBar": {
+            "first": "How do they affect my business?",
+            "second": "How am I going to profit from them?"
+        },
+        "title": "Services with attention to details",
+        "paragraph": "Our team offers a range of services to help you create the digital experience you want.",
+        "serviceList": [
+            {
+              "title": "UI/UX Design",
+              "desc": "Elevate user experiences with stunning UI/UX designs that captivate and engage."
+             
+            },
+            {
+              "title": "Front-End Development",
+              "desc": "Build visually impressive and responsive websites with user-friendly interface."
+            },
+            {
+              "title": "Back-End Development",
+              "desc": "Create scalable and secure systems that handle complex operations."
+            }
+        ]
+    },
+    "projects": {
+        "searchBar": ["What kind of project would be ideal?", "What do I want to achieve?" ],
+        "title": "Quick journey of our latest projects",
+        "paragraph": "Hop on a visual tour of our latest projects, showcasing our expertise in web development and design. Discover innovation and quality in every step of our journey.",
+        "primary": "Start a project",
+        "secondary": "See our magic",
+        "projectList": [
+            {
+                "title": "bezCV - online platform for recruiters and employees",
+                "desc": "Hire and seek recruiters, everything done by our team, from design to functionality.",
+                "link": "https://bezcv.com",
+                "button": {
+                    "text": "See our magic",
+                    "disabled": false
+                }
+            },
+            {
+                "title": "SmartTipz - online video platform for sharing and watching content",
+                "desc": "Choose from the normal and business account. Explore videos and earn on uploading content through tipping system.",
+                "link": "/",
+                "button": {
+                    "text": "Coming soon!",
+                    "disabled": false
+                }
+            },
+            {
+                "title": "Case Study: Pricing Plans - four different layouts, one style guide",
+                "desc": "Tailored pricing solutions designed to fit the client needs. Choose from the four distinct layouts based on the given style guide.",
+                "link": "https://dpricing.netlify.app/",
+                "button": {
+                    "text": "See our magic",
+                    "disabled": false
+                }
+            },
+            {
+                "title": "Flippify - our ultimate educational app for flashcards and notes",
+                "desc": "Discover a whole new way of learning with Flippify. Seamlessly flip through interactive flashcards and access concise, organized notes on the go. Whether you're a student, professional, or lifelong learner, Flippify empowers you to master any subject with ease.",
+                "link": "https://expo.dev/accounts/divideproject/projects/flippify/builds/b21bbb1a-91aa-48f4-a386-ffe7a2a81dac",
+                "button": {
+                    "text": "Coming soon!",
+                    "disabled": false
+                }
+            }
+        ]
+    },
+    "opinions": {
+        "title": "Relationship built on trust",
+        "searchBar": [ "What values do I get from them?","What would be my profit?"],
+        "opinionList": [
+            {
+              "content": "Collaborating with this team was a game-changer for our business. Their innovative approach to web development boosted our online presence and exceeded our expectations.",
+              "column": 1,
+              "user": {
+                "fullName": "Oliver Andersen",
+                "position": "CEO of Stellar Solutions Ltd."
+              }
+            },
+            {
+              "content": "As a marketer, I highly recommend their UI/UX design services. The seamless user experience they created improved our website's performance and increased customer engagement.",
+              "column": 2,
+              "user": {
+                "fullName": "Sophia Lopez",
+                "position": "Marketing Director at Zenith Industries"
+              }
+            },
+            {
+              "content": "They delivered the design as a pixel-perfect React app in just a couple of iterations that looked and felt good to play with. The components were all modular, full typed, and easy to understand.",
+              "column": 2,
+              "user": {
+                "fullName": "Zlenner",
+                "position": "Private Project"
+              }
+            },
+            {
+              "content": "I'm really impressed with the quality of work that DivideProject provides. They have an incredible eye for design and their attention to detail is second to none.",
+              "column": 1,
+              "user": {
+                "fullName": "Lucas Kowalski",
+                "position": "Private Project"
+              }
+            },
+            {
+              "content": "Great team. They followed the best practices for developement and completed the job in the given timeline. They are also very knowledgeable. They suggested some out of the box changes for the project to improve performance.",
+              "column": 3,
+              "user": {
+                "fullName": "Meet Mishry",
+                "position": "MD Dev"
+              }
+            },
+            {
+              "content": "Back-end development was a critical aspect of our product, and their team delivered flawlessly. Their robust solutions ensured the scalability and security our business needed.",
+              "column": 3,
+              "user": {
+                "fullName": "Isabella Weber",
+                "position": "Co-Founder of Techno Innovations"
+              }
+            }
+          ]
+    },
+    "contact": {
+        "title": {
+            "prefix": "Let’s craft something nice",
+            "marked": "together"
+        },
+        "faq": [
+            {
+                "id": 0,
+                "question": "What web development technologies do you specialize in?",
+                "answer": "We specialize in cutting-edge web development technologies, including Next.js, FastAPI, React, Tailwind CSS and more. Our expertise ensures high-performance, modern websites that are SEO-friendly."
+            },
+            {
+                "id": 1,
+                "question": "What is the typical timeframe for completing a web development project?",
+                "answer": "The project timeframe can vary depending on the scope and complexity of the project. We work closely with our clients to define realistic timelines and milestones. Once we understand your specific requirements, we can provide you with a tailored timeframe estimate."
+            },
+            {
+                "id": 2,
+                "question": "Do you provide ongoing support and maintenance after the project launch?",
+                "answer": "Absolutely! We offer ongoing support and maintenance services to ensure your application or website continues to perform optimally. From regular updates and security patches to content management assistance, we are here to support your project's long-term success."
+            },
+            {
+                "id": 3,
+                "question": "Do you offer consultations?",
+                "answer": "Yes, we do offer consultations. Please contact us to discuss your requirements, and we can arrange a meeting at your convenience to further understand your needs and provide personalized solutions."
+            }
+        ],
+        "form": {
+          "searchBar": ["Get in touch with us", "Describe your idea", "Describe your goals", "Make your project real"],
+          "fields": {
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "message": "Message",
+            "send": "Send"
+          },
+          "success": {
+            "title": "Thank you for registering!",
+            "paragraph": "We will review your order along with the message you provided and respond as soon as possible!"
+          }
+        }
+    }
+}
