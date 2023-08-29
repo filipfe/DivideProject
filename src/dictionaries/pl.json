@@ -178,7 +178,8 @@
           },
           "success": {
             "title": "Dziękujemy za kontakt!",
-            "paragraph": "Sprawdzimy twoje zapytanie wraz z przesłaną wiadomością i odpowiemy jak najszybciej!"
+            "paragraph": "Sprawdzimy twoje zapytanie wraz z przesłaną wiadomością i odpowiemy jak najszybciej!",
+            "button": "Jasne!"
           }
         }
     }

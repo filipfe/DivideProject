@@ -178,7 +178,8 @@
           },
           "success": {
             "title": "Thank you for registering!",
-            "paragraph": "We will review your order along with the message you provided and respond as soon as possible!"
+            "paragraph": "We will review your order along with the message you provided and respond as soon as possible!",
+            "button": "Cool!"
           }
         }
     }

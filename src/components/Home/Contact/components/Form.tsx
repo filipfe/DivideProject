@@ -117,7 +117,7 @@ export default function Form({ dict }: { dict: Dict["contact"]["form"] }) {
               {dict.success.paragraph}
             </p>
             <PrimaryButton onClick={() => setPopupVisible(false)}>
-              Cool!
+              {dict.success.button}
             </PrimaryButton>
             <Pointer
               pointerPosition="-left-[2.5in] -top-[3rem] hidden md:block"
