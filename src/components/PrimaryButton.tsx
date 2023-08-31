@@ -25,8 +25,9 @@ export default function PrimaryButton({
         <button
           type={type}
           onClick={onClick}
-          className={`bg-[#7856FF]/40 hover:bg-[#7856FF]/60 transition-all w-full sm:max-w-max justify-center gap-2 py-[10px] px-6 flex items-center rounded-lg text-white text-sm font-medium ${
-            disabled ? "opacity-60" : "opacity-100"
+          disabled={disabled}
+          className={`bg-[#7856FF]/40 transition-all w-full sm:max-w-max justify-center gap-2 py-[10px] px-6 flex items-center rounded-lg text-white text-sm font-medium ${
+            disabled ? "opacity-60" : "opacity-100 hover:bg-[#7856FF]/60"
           } ${className}`}
         >
           {children}
