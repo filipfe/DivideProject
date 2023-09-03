@@ -1,4 +1,25 @@
 {
+    "metadata": {
+      "title": "DivideProject - Budujemy rozwiązania w sieci, przynoszące rezultaty",
+      "description": "Odblokuj potencjał swojej działalności dzięki obecności w internecie razem z DivideProject. Specjalizujemy się w tworzeniu wydajnych stron internetowych, aplikacji mobilnych i aplikacji internetowych przy użyciu technologii NextJS, React i Tailwind CSS. Zbuduj coś wielkiego online za pomocą naszych innowacyjnych rozwiązań.",
+      "applicationName": "Strona DivideProject",
+      "authors": [
+        {
+          "name": "DivideProject",
+          "url": "https://www.divideproject.com"
+        }
+      ],
+      "metadataBase": "https://www.divideproject.com",
+      "openGraph": {
+        "title": "DivideProject - Budujemy rozwiązania w sieci, przynoszące rezultaty",
+      "description": "Odblokuj potencjał swojej działalności dzięki obecności w internecie razem z DivideProject. Specjalizujemy się w tworzeniu wydajnych stron internetowych, aplikacji mobilnych i aplikacji internetowych przy użyciu technologii NextJS, React i Tailwind CSS. Zbuduj coś wielkiego online za pomocą naszych innowacyjnych rozwiązań.",
+        "url": "https://www.divideproject.com"
+      },
+      "twitter": {
+        "title": "DivideProject - Budujemy rozwiązania w sieci, przynoszące rezultaty",
+      "description": "Odblokuj potencjał swojej działalności dzięki obecności w internecie razem z DivideProject. Specjalizujemy się w tworzeniu wydajnych stron internetowych, aplikacji mobilnych i aplikacji internetowych przy użyciu technologii NextJS, React i Tailwind CSS."
+      }
+    },
     "navigation": {
         "services": "Usługi",
         "work": "Nasza praca",
