@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import { GetStaticPaths, Metadata } from "next";
 import "../globals.css";
 import { Montserrat } from "next/font/google";
 import GAProvider from "@/providers/GAProvider";
