@@ -19,7 +19,10 @@ export async function generateMetadata({
   params: Awaited<ReturnType<typeof generateStaticParams>>[0];
 }): Promise<Metadata> {
   const dict = await getDictionary(params.lang as Locale);
-  return dict.metadata as unknown as Metadata;
+  return {
+    ...dict.metadata,
+    metadataBase: new URL(dict.metadata.metadataBase),
+  } as Metadata;
 }
 
 export default function RootLayout({
