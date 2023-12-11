@@ -1,207 +1,220 @@
 {
-    "metadata": {
+  "metadata": {
+    "title": "DivideProject - Budujemy rozwiązania w sieci, przynoszące rezultaty",
+    "description": "Odblokuj potencjał swojej działalności dzięki obecności w internecie razem z DivideProject. Specjalizujemy się w tworzeniu wydajnych stron internetowych, aplikacji mobilnych i aplikacji internetowych przy użyciu technologii NextJS, React i Tailwind CSS. Zbuduj coś wielkiego online za pomocą naszych innowacyjnych rozwiązań.",
+    "applicationName": "Strona DivideProject",
+    "authors": [
+      {
+        "name": "DivideProject",
+        "url": "https://www.divideproject.com"
+      }
+    ],
+    "metadataBase": "https://www.divideproject.com",
+    "openGraph": {
       "title": "DivideProject - Budujemy rozwiązania w sieci, przynoszące rezultaty",
       "description": "Odblokuj potencjał swojej działalności dzięki obecności w internecie razem z DivideProject. Specjalizujemy się w tworzeniu wydajnych stron internetowych, aplikacji mobilnych i aplikacji internetowych przy użyciu technologii NextJS, React i Tailwind CSS. Zbuduj coś wielkiego online za pomocą naszych innowacyjnych rozwiązań.",
-      "applicationName": "Strona DivideProject",
-      "authors": [
-        {
-          "name": "DivideProject",
-          "url": "https://www.divideproject.com"
-        }
-      ],
-      "metadataBase": "https://www.divideproject.com",
-      "openGraph": {
-        "title": "DivideProject - Budujemy rozwiązania w sieci, przynoszące rezultaty",
-      "description": "Odblokuj potencjał swojej działalności dzięki obecności w internecie razem z DivideProject. Specjalizujemy się w tworzeniu wydajnych stron internetowych, aplikacji mobilnych i aplikacji internetowych przy użyciu technologii NextJS, React i Tailwind CSS. Zbuduj coś wielkiego online za pomocą naszych innowacyjnych rozwiązań.",
-        "url": "https://www.divideproject.com"
-      },
-      "twitter": {
-        "title": "DivideProject - Budujemy rozwiązania w sieci, przynoszące rezultaty",
+      "url": "https://www.divideproject.com"
+    },
+    "twitter": {
+      "title": "DivideProject - Budujemy rozwiązania w sieci, przynoszące rezultaty",
       "description": "Odblokuj potencjał swojej działalności dzięki obecności w internecie razem z DivideProject. Specjalizujemy się w tworzeniu wydajnych stron internetowych, aplikacji mobilnych i aplikacji internetowych przy użyciu technologii NextJS, React i Tailwind CSS."
-      }
-    },
-    "navigation": {
-        "services": "Usługi",
-        "work": "Nasza praca",
-        "opinions": "Relacje",
-        "primary": "Rozpocznij projekt"
-    },
-    "hero": {
-        "title": {
-            "prefix": "Budujemy",
-            "markedLeft": "rozwiązania",
-            "markedRight": "w sieci",
-            "sufixLeft": "w sieci",
-            "sufixRight": "przynoszące rezultaty"
-        },
-        "paragraph": "Przekształć swój biznes dzięki naszym nowoczesnym rozwiązaniom",
-        "primary": "Rozpocznij projekt",
-        "secondary": "Nasza praca"
-    },
-    "services": {
-        "lang": "pl",
-        "searchBar": {
-            "first": "Jaki mają wpływ na mój biznes?",
-            "second": "Jakie będą moje korzyści?"
-        },
-        "title": "Usługi z dbałością o szczegóły",
-        "paragraph": "Nasz zespół oferuje szereg usług, które pomogą Ci stworzyć cyfrowe wrażenia, jakich pragniesz.",
-        "serviceList": [
-            {
-              "title": "UI/UX Design",
-              "desc": "Oszałamiające projekty graficzne UI / UX, które urzekają i angażują."
-             
-            },
-            {
-              "title": "Front-End Development",
-              "desc": "Imponujące wizualnie i responsywne aplikacje z przyjaznym interfejsem."
-            },
-            {
-              "title": "Back-End Development",
-              "desc": "Skalowalne i bezpieczne systemy obsługujące złożone operacje."
-            }
-          ]
-    },
-    "projects": {
-        "searchBar": ["Jaki projekt będzie idealny?", "Co chcę osiągnąć?"],
-        "title": "Podróż po najnowszych projektach",
-        "paragraph": "Wybierz się na wizualną podróż po naszych najnowszych projektach, prezentującą naszą wiedzę w zakresie tworzenia i projektowania stron internetowych. Odkryj innowację i jakość na każdym etapie.",
-        "primary": "Rozpocznij projekt",
-        "secondary": "Zobacz magię",
-        "projectList": [
-            {
-                "title": "bezCV - platforma internetowa dla rekruterów i pracowników",
-                "desc": "Zatrudniaj i szukaj pracowników, wszystko zrobione przez nasz zespół, od projektu po funkcjonalność.",
-                "link": "https://bezcv.com",
-                "button": {
-                    "text": "Zobacz magię",
-                    "disabled": false
-                }
-            },
-            {
-                "title": "SmartTipz - internetowa platforma wideo do udostępniania i oglądania treści",
-                "desc": "Wybierz konto zwykłe lub firmowe. Przeglądaj filmy i zarabiaj na przesyłaniu treści za pośrednictwem systemu napiwków.",
-                "link": "/",
-                "button": {
-                    "text": "Już wkrótce",
-                    "disabled": true
-                }
-            },
-            {
-                "title": "Case Study: Plany cenowe - cztery różne układy, jeden i ten sam styl",
-                "desc": "Rozwiązania układów planów cenowych dostosowanych do potrzeb klienta. Wybierz jeden z czterech różnych układów w oparciu o podany styl.",
-                "link": "https://dpricing.netlify.app/",
-                "button": {
-                    "text": "Zobacz magię",
-                    "disabled": false
-                }
-            },
-            {
-                "title": "Flippify - nasza wszechstronna, mobilna aplikacja edukacyjna do fiszek",
-                "desc": "Odkryj zupełnie nowy sposób nauki dzięki Flippify. Bezproblemowo przeglądaj interaktywne fiszki, twórz i rozwiązuj fiszkolisty. Gdziekolwiek jesteś. Niezależnie od tego, czy jesteś uczniem, studentem czy też nie, Flippify umożliwia łatwe opanowanie dowolnego przedmiotu w połączeniu z zabawą.",
-                "link": "https://expo.dev/accounts/divideproject/projects/flippify/builds/b21bbb1a-91aa-48f4-a386-ffe7a2a81dac",
-                "button": {
-                    "text": "Już wkrótce",
-                    "disabled": true
-                }
-            }
-        ]
-    },
-    "opinions": {
-        "title": "Relacja zbudowana na zaufaniu",
-        "searchBar": ["Jakie korzyści z niej wyciągam?", "Co mogę osiągnąć?"],
-        "opinionList": [
-            {
-              "content": "Współpraca z tym zespołem była przełomowa dla naszej firmy. Ich innowacyjne podejście do tworzenia stron internetowych wzmocniło naszą obecność online i przekroczyło nasze oczekiwania.",
-              "column": 1,
-              "user": {
-                "fullName": "Oliver Andersen",
-                "position": "CEO Stellar Solutions Ltd."
-              }
-            },
-            {
-              "content": "Jako marketer gorąco polecam ich usługi projektowania UI/UX. Bezproblemowe doświadczenie użytkownika, które stworzyli, poprawiło wydajność naszej strony internetowej i zwiększyło zaangażowanie klientów.",
-              "column": 2,
-              "user": {
-                "fullName": "Sophia Lopez",
-                "position": "Dyrektor Marketingu"
-              }
-            },
-            {
-              "content": "Dostarczyli projekt jako perfekcyjnie odwzorowany design, który wyglądał i działał rewelacyjnie. Komponenty były modułowe, ze wsparciem dla typów i łatwe do zrozumienia.",
-              "column": 2,
-              "user": {
-                "fullName": "Zlenner",
-                "position": "Private Project"
-              }
-            },
-            {
-              "content": "Jestem naprawdę pod wrażeniem jakości pracy, którą świadczy DivideProject. Mają niesamowite oko do designu, a ich dbałość o szczegóły jest niezrównana.",
-              "column": 1,
-              "user": {
-                "fullName": "Łukasz Kowalski",
-                "position": "Private Project"
-              }
-            },
-            {
-              "content": "Wspaniały i bardzo kompetentny zespół. Oprócz świetnego wsparcia w tworzeniu, zaproponowali również kilka nietypowych zmian w projekcie, aby poprawić jego wydajność.",
-              "column": 3,
-              "user": {
-                "fullName": "Meet Mishry",
-                "position": "MD Dev"
-              }
-            },
-            {
-              "content": "Rozwój back-endu był kluczowy dla naszego produktu, a ich zespół dostarczył go bezbłędnie. Ich solidne rozwiązania zapewniły skalowalność i bezpieczeństwo.",
-              "column": 3,
-              "user": {
-                "fullName": "Isabella Weber",
-                "position": "Private Project"
-              }
-            }
-        ]
-    },
-    "contact": {
-        "title": {
-            "prefix": "Zbudujmy razem",
-            "marked": "coś wielkiego"
-        },
-        "faq": [
-            {
-              "id": 0,
-              "question": "W jakich technologiach związanych z tworzeniem aplikacji i stron internetowych się specjalizujecie?",
-              "answer": "Specjalizujemy się w najnowszych technologiach tworzenia stron internetowych, takich jak Next.js, FastAPI, React, Tailwind CSS i wiele innych. Nasza ekspertyza zapewnia wydajne i nowoczesne strony internetowe przyjazne dla SEO."
-            },
-            {
-              "id": 1,
-              "question": "Jaki jest typowy czas realizacji projektu?",
-              "answer": "Czas realizacji projektu może się różnić w zależności od zakresu i złożoności projektu. Ścisłe współpracujemy z naszymi klientami, aby określić realistyczne ramy czasowe i kamienie milowe. Po zrozumieniu konkretnych wymagań możemy podać spersonalizowaną szacunkową datę realizacji."
-            },
-            {
-              "id": 2,
-              "question": "Czy zapewnacie wsparcie i utrzymanie po uruchomieniu projektu?",
-              "answer": "Oczywiście! Oferujemy usługi ciągłego wsparcia i utrzymania, aby zapewnić optymalną wydajność Twojej aplikacji lub strony internetowej. Od regularnych aktualizacji i łatek zabezpieczeń po pomoc w zarządzaniu treścią – jesteśmy tu, aby wesprzeć długoterminowy sukces Twojego projektu."
-            },
-            {
-              "id": 3,
-              "question": "Czy oferujecie konsultacje odnośnie projektów?",
-              "answer": "Tak, oferujemy konsultacje. Skontaktuj się z nami, aby omówić szczegóły twojego projektu, a my możemy zorganizować spotkanie w dogodnym terminie, aby lepiej zrozumieć Twoje wymagania i dostarczyć spersonalizowane rozwiązania."
-            }
-          ],
-        "form": {
-          "searchBar": ["Skontaktuj się z nami", "Opisz swój pomysł", "Opisz swoje cele", "Urzeczywistnij swój projekt"],
-          "fields": {
-              "firstName": "Imię",
-              "lastName": "Nazwisko",
-              "email": "Email",
-              "message": "Wiadomość",
-              "send": "Wyślij"
-          },
-          "success": {
-            "title": "Dziękujemy za kontakt!",
-            "paragraph": "Sprawdzimy twoje zapytanie wraz z przesłaną wiadomością i odpowiemy jak najszybciej!",
-            "button": "Jasne!"
-          }
-        }
     }
+  },
+  "navigation": {
+    "services": "Usługi",
+    "work": "Nasza praca",
+    "opinions": "Relacje",
+    "primary": "Rozpocznij projekt"
+  },
+  "hero": {
+    "title": {
+      "prefix": "Budujemy",
+      "markedLeft": "rozwiązania",
+      "markedRight": "w sieci",
+      "sufixLeft": "w sieci",
+      "sufixRight": "przynoszące rezultaty"
+    },
+    "paragraph": "Przekształć swój biznes dzięki naszym nowoczesnym rozwiązaniom",
+    "primary": "Rozpocznij projekt",
+    "secondary": "Nasza praca"
+  },
+  "services": {
+    "lang": "pl",
+    "searchBar": {
+      "first": "Jaki mają wpływ na mój biznes?",
+      "second": "Jakie będą moje korzyści?"
+    },
+    "title": "Usługi z dbałością o szczegóły",
+    "paragraph": "Nasz zespół oferuje szereg usług, które pomogą Ci stworzyć cyfrowe wrażenia, jakich pragniesz.",
+    "serviceList": [
+      {
+        "title": "UI/UX Design",
+        "desc": "Oszałamiające projekty graficzne UI / UX, które urzekają i angażują."
+      },
+      {
+        "title": "Front-End Development",
+        "desc": "Imponujące wizualnie i responsywne aplikacje z przyjaznym interfejsem."
+      },
+      {
+        "title": "Back-End Development",
+        "desc": "Skalowalne i bezpieczne systemy obsługujące złożone operacje."
+      }
+    ]
+  },
+  "projects": {
+    "searchBar": ["Jaki projekt będzie idealny?", "Co chcę osiągnąć?"],
+    "title": "Podróż po najnowszych projektach",
+    "paragraph": "Wybierz się na wizualną podróż po naszych najnowszych projektach, prezentującą naszą wiedzę w zakresie tworzenia i projektowania stron internetowych. Odkryj innowację i jakość na każdym etapie.",
+    "primary": "Rozpocznij projekt",
+    "secondary": "Zobacz magię",
+    "projectList": [
+      {
+        "title": "bezCV - platforma internetowa dla rekruterów i pracowników",
+        "desc": "Zatrudniaj i szukaj pracowników, wszystko zrobione przez nasz zespół, od projektu po funkcjonalność.",
+        "link": "https://bezcv.com",
+        "button": {
+          "text": "Zobacz magię",
+          "disabled": false
+        }
+      },
+      {
+        "title": "SmartTipz - internetowa platforma wideo do udostępniania i oglądania treści",
+        "desc": "Wybierz konto zwykłe lub firmowe. Przeglądaj filmy i zarabiaj na przesyłaniu treści za pośrednictwem systemu napiwków.",
+        "link": "/",
+        "button": {
+          "text": "Już wkrótce",
+          "disabled": true
+        }
+      },
+      {
+        "title": "GreenRoad - strona internetowa agencji marketingowej",
+        "desc": "Odkryj potęgę skuteczności marketingu z GreenRoad - agencją, która łączy innowacyjne podejście z solidnym doświadczeniem. Strona w całości zaprojektowana i zaprogramowana przez DivideProject, skupiając się przy tym na jak najlepszym przedstawieniu agencji.",
+        "link": "https://www.greenroadagency.com",
+        "button": {
+          "text": "Zobacz magię",
+          "disabled": false
+        }
+      },
+      {
+        "title": "Case Study: Plany cenowe - cztery różne układy, jeden i ten sam styl",
+        "desc": "Rozwiązania układów planów cenowych dostosowanych do potrzeb klienta. Wybierz jeden z czterech różnych układów w oparciu o podany styl.",
+        "link": "https://dpricing.netlify.app/",
+        "button": {
+          "text": "Zobacz magię",
+          "disabled": false
+        }
+      },
+      {
+        "title": "Flippify - nasza wszechstronna, mobilna aplikacja edukacyjna do fiszek",
+        "desc": "Odkryj zupełnie nowy sposób nauki dzięki Flippify. Bezproblemowo przeglądaj interaktywne fiszki, twórz i rozwiązuj fiszkolisty. Gdziekolwiek jesteś. Niezależnie od tego, czy jesteś uczniem, studentem czy też nie, Flippify umożliwia łatwe opanowanie dowolnego przedmiotu w połączeniu z zabawą.",
+        "link": "https://expo.dev/accounts/divideproject/projects/flippify/builds/b21bbb1a-91aa-48f4-a386-ffe7a2a81dac",
+        "button": {
+          "text": "Już wkrótce",
+          "disabled": true
+        }
+      }
+    ]
+  },
+  "opinions": {
+    "title": "Relacja zbudowana na zaufaniu",
+    "searchBar": ["Jakie korzyści z niej wyciągam?", "Co mogę osiągnąć?"],
+    "opinionList": [
+      {
+        "content": "Współpraca z tym zespołem była przełomowa dla naszej firmy. Ich innowacyjne podejście do tworzenia stron internetowych wzmocniło naszą obecność online i przekroczyło nasze oczekiwania.",
+        "column": 1,
+        "user": {
+          "fullName": "Oliver Andersen",
+          "position": "CEO Stellar Solutions Ltd."
+        }
+      },
+      {
+        "content": "Jako marketer gorąco polecam ich usługi projektowania UI/UX. Bezproblemowe doświadczenie użytkownika, które stworzyli, poprawiło wydajność naszej strony internetowej i zwiększyło zaangażowanie klientów.",
+        "column": 2,
+        "user": {
+          "fullName": "Sophia Lopez",
+          "position": "Dyrektor Marketingu"
+        }
+      },
+      {
+        "content": "Dostarczyli projekt jako perfekcyjnie odwzorowany design, który wyglądał i działał rewelacyjnie. Komponenty były modułowe, ze wsparciem dla typów i łatwe do zrozumienia.",
+        "column": 2,
+        "user": {
+          "fullName": "Zlenner",
+          "position": "Private Project"
+        }
+      },
+      {
+        "content": "Jestem naprawdę pod wrażeniem jakości pracy, którą świadczy DivideProject. Mają niesamowite oko do designu, a ich dbałość o szczegóły jest niezrównana.",
+        "column": 1,
+        "user": {
+          "fullName": "Łukasz Kowalski",
+          "position": "Private Project"
+        }
+      },
+      {
+        "content": "Wspaniały i bardzo kompetentny zespół. Oprócz świetnego wsparcia w tworzeniu, zaproponowali również kilka nietypowych zmian w projekcie, aby poprawić jego wydajność.",
+        "column": 3,
+        "user": {
+          "fullName": "Meet Mishry",
+          "position": "MD Dev"
+        }
+      },
+      {
+        "content": "Rozwój back-endu był kluczowy dla naszego produktu, a ich zespół dostarczył go bezbłędnie. Ich solidne rozwiązania zapewniły skalowalność i bezpieczeństwo.",
+        "column": 3,
+        "user": {
+          "fullName": "Isabella Weber",
+          "position": "Private Project"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "title": {
+      "prefix": "Zbudujmy razem",
+      "marked": "coś wielkiego"
+    },
+    "faq": [
+      {
+        "id": 0,
+        "question": "W jakich technologiach związanych z tworzeniem aplikacji i stron internetowych się specjalizujecie?",
+        "answer": "Specjalizujemy się w najnowszych technologiach tworzenia stron internetowych, takich jak Next.js, FastAPI, React, Tailwind CSS i wiele innych. Nasza ekspertyza zapewnia wydajne i nowoczesne strony internetowe przyjazne dla SEO."
+      },
+      {
+        "id": 1,
+        "question": "Jaki jest typowy czas realizacji projektu?",
+        "answer": "Czas realizacji projektu może się różnić w zależności od zakresu i złożoności projektu. Ścisłe współpracujemy z naszymi klientami, aby określić realistyczne ramy czasowe i kamienie milowe. Po zrozumieniu konkretnych wymagań możemy podać spersonalizowaną szacunkową datę realizacji."
+      },
+      {
+        "id": 2,
+        "question": "Czy zapewnacie wsparcie i utrzymanie po uruchomieniu projektu?",
+        "answer": "Oczywiście! Oferujemy usługi ciągłego wsparcia i utrzymania, aby zapewnić optymalną wydajność Twojej aplikacji lub strony internetowej. Od regularnych aktualizacji i łatek zabezpieczeń po pomoc w zarządzaniu treścią – jesteśmy tu, aby wesprzeć długoterminowy sukces Twojego projektu."
+      },
+      {
+        "id": 3,
+        "question": "Czy oferujecie konsultacje odnośnie projektów?",
+        "answer": "Tak, oferujemy konsultacje. Skontaktuj się z nami, aby omówić szczegóły twojego projektu, a my możemy zorganizować spotkanie w dogodnym terminie, aby lepiej zrozumieć Twoje wymagania i dostarczyć spersonalizowane rozwiązania."
+      }
+    ],
+    "form": {
+      "searchBar": [
+        "Skontaktuj się z nami",
+        "Opisz swój pomysł",
+        "Opisz swoje cele",
+        "Urzeczywistnij swój projekt"
+      ],
+      "fields": {
+        "firstName": "Imię",
+        "lastName": "Nazwisko",
+        "email": "Email",
+        "message": "Wiadomość",
+        "send": "Wyślij"
+      },
+      "success": {
+        "title": "Dziękujemy za kontakt!",
+        "paragraph": "Sprawdzimy twoje zapytanie wraz z przesłaną wiadomością i odpowiemy jak najszybciej!",
+        "button": "Jasne!"
+      }
+    }
+  }
 }

@@ -1,7 +1,7 @@
-import { defaultUser } from "@/assets/home/home";
 import {
   bezcv,
   flippify,
+  greenroad,
   pricing,
   smarttipz,
 } from "@/assets/projects/projects";
@@ -44,6 +44,7 @@ export const serviceDecorators: JSX.Element[] = [
 export const thumbnails: StaticImageData[] = [
   bezcv,
   smarttipz,
+  greenroad,
   pricing,
   flippify,
 ];
