@@ -18,16 +18,28 @@ export async function sendMail(data: FormData) {
     },
   });
   try {
-    await transporter.sendMail({
-      from: user,
-      to: user,
-      subject: `Nowe zatwierdzenie formularza ${new Date().toLocaleDateString()} - DivideProject`,
-      text: `
-          Imię: ${firstName}
-          Nazwisko: ${lastName}
-          Email: ${email}
-          Message: ${message}
-      `,
+    await new Promise((resolve, reject) => {
+      transporter.sendMail(
+        {
+          from: user,
+          to: user,
+          subject: `Nowe zatwierdzenie formularza ${new Date().toLocaleDateString()} - DivideProject`,
+          text: `
+            Imię: ${firstName}
+            Nazwisko: ${lastName}
+            Email: ${email}
+            Message: ${message}
+        `,
+        },
+        (err, info) => {
+          if (err) {
+            console.error(err);
+            reject(err);
+          } else {
+            resolve(info);
+          }
+        }
+      );
     });
     return { status: "success" };
   } catch (err) {
