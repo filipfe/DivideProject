@@ -1,36 +1,36 @@
 "use server";
 
-import sgMail from "@sendgrid/mail";
-import { createServerActionClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/dist/client/components/headers";
-
-sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY || "");
+import nodemailer from "nodemailer";
 
 export async function sendMail(data: FormData) {
+  "use server";
   const firstName = data.get("first-name")?.toString();
   const lastName = data.get("last-name")?.toString();
   const email = data.get("email")?.toString();
   const message = data.get("message")?.toString();
-  const supabase = createServerActionClient({ cookies });
+  const user = process.env.NEXT_PUBLIC_EMAIL;
+  const pass = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user,
+      pass,
+    },
+  });
   try {
-    await supabase.from("messages").insert({
-      first_name: firstName,
-      last_name: lastName,
-      email,
-      message,
-    });
-    const response = await sgMail.send({
-      from: "divideproject.business@gmail.com",
-      to: "divideproject.business@gmail.com",
-      subject: `New form submission from ${firstName} ${lastName}`,
+    await transporter.sendMail({
+      from: user,
+      to: user,
+      subject: `Nowe zatwierdzenie formularza ${new Date().toLocaleDateString()} - DivideProject`,
       text: `
-                Full Name: ${firstName} ${lastName}
-                Email: ${email}
-                Message: ${message}
-            `,
+          Imię: ${firstName}
+          Nazwisko: ${lastName}
+          Email: ${email}
+          Message: ${message}
+      `,
     });
     return { status: "success" };
   } catch (err) {
-    return { status: "failure", error: err };
+    console.log({ err });
   }
 }

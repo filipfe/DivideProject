@@ -59,11 +59,10 @@ export default function Form({ dict }: { dict: Dict["contact"]["form"] }) {
           action={(data) =>
             startTransition(async () => {
               const resp = await sendMail(data);
-              if (resp.status === "success") {
+              if (resp?.status === "success") {
                 setPopupVisible(true);
                 formRef.current?.reset();
               } else {
-                console.log(resp.error);
                 toast.error("An error occured!");
               }
             })
